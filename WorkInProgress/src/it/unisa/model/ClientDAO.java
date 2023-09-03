@@ -23,7 +23,7 @@ public class ClientDAO {
             Context initCtx = new InitialContext();
             Context envCtx = (Context) initCtx.lookup("java:comp/env");
 
-            ds = (DataSource) envCtx.lookup("jdbc/JadeTear");
+            ds = (DataSource) envCtx.lookup("jdbc/WorkInProgress");
 
         } catch (NamingException e) {
             LOGGER.log( Level.SEVERE, e.toString(), e );
