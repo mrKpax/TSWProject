@@ -41,7 +41,7 @@ public class ProductDAO {
     int id = -1;
     
     String insertSQL = "INSERT INTO " + TABLE
-                       + " (nome, categoria, descrizione, marca, immagine, IVA, prezzo, tipo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+                       + " (nome, categoria, descrizione, marca, immagine, IVA, prezzo) VALUES (?, ?, ?, ?, ?, ?, ?)";
     
     try {
       connection = ds.getConnection();
@@ -53,7 +53,6 @@ public class ProductDAO {
       preparedStatement.setFloat(6, jewel.getIVA());
       preparedStatement.setFloat(7, jewel.getPrezzo());
       preparedStatement.setString(8, jewel.getDescrizione());
-      preparedStatement.setString(9, jewel.getTipo());
 
       preparedStatement.executeUpdate();
 
@@ -102,7 +101,6 @@ public class ProductDAO {
         product.setIVA(rs.getFloat("IVA"));
         product.setPrezzo(rs.getFloat("prezzo"));
         product.setDescrizione(rs.getString("descrizione"));
-        product.setTipo(rs.getString("tipo"));
         
       }
 
@@ -172,7 +170,6 @@ public class ProductDAO {
     	product.setIVA(rs.getFloat("IVA"));
     	product.setPrezzo(rs.getFloat("prezzo"));
     	product.setDescrizione(rs.getString("descrizione"));
-    	product.setTipo(rs.getString("tipo"));
         
         products.add(product);
       }
@@ -215,7 +212,6 @@ public class ProductDAO {
     	product.setIVA(rs.getFloat("IVA"));
     	product.setPrezzo(rs.getFloat("prezzo"));
     	product.setDescrizione(rs.getString("descrizione"));
-    	product.setTipo(rs.getString("tipo"));
 
         products.add(product);
       }
@@ -239,7 +235,7 @@ public class ProductDAO {
     
     int result = 0;
     
-    String updateSQL = "UPDATE "+ TABLE+ " SET nome = ?, categoria = ?, marca = ?, immagine = ?, IVA = ?, prezzo = ?, descrizione = ?, tipo = ?" + "WHERE id_prodotto = ?";
+    String updateSQL = "UPDATE "+ TABLE+ " SET nome = ?, categoria = ?, marca = ?, immagine = ?, IVA = ?, prezzo = ?, descrizione = ?" + "WHERE id_prodotto = ?";
     
     try{
       connection = ds.getConnection();
@@ -252,7 +248,6 @@ public class ProductDAO {
       preparedStatement.setFloat(5, product.getIVA());
       preparedStatement.setFloat(6, product.getPrezzo());
       preparedStatement.setString(7, product.getDescrizione());
-      preparedStatement.setString(8, product.getTipo());
       preparedStatement.setInt(9, product.getId());
 
       preparedStatement.executeUpdate();
@@ -296,7 +291,6 @@ public class ProductDAO {
     	product.setIVA(rs.getFloat("IVA"));
     	product.setPrezzo(rs.getFloat("prezzo"));
     	product.setDescrizione(rs.getString("descrizione"));
-    	product.setTipo(rs.getString("tipo"));
         
         beans.add(product);
       }
@@ -340,7 +334,6 @@ public class ProductDAO {
     	product.setIVA(rs.getFloat("IVA"));
     	product.setPrezzo(rs.getFloat("prezzo"));
     	product.setDescrizione(rs.getString("descrizione"));
-    	product.setTipo(rs.getString("tipo"));
 
         beans.add(product);
       }
@@ -383,7 +376,6 @@ public class ProductDAO {
     	product.setIVA(rs.getFloat("IVA"));
         product.setPrezzo(rs.getFloat("prezzo"));
         product.setDescrizione(rs.getString("descrizione"));
-        product.setTipo(rs.getString("tipo"));
 
         beans.add(product);
       }
@@ -425,7 +417,6 @@ public class ProductDAO {
         product.setIVA(rs.getFloat("IVA"));
         product.setPrezzo(rs.getFloat("prezzo"));
         product.setDescrizione(rs.getString("descrizione"));
-        product.setTipo(rs.getString("tipo"));
 
         beans.add(product);
       }

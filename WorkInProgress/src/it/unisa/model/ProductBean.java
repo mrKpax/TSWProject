@@ -10,7 +10,6 @@ public class ProductBean {
 	  private String immagine;
 	  private float IVA;
 	  private float prezzo;
-	  private String tipo;
 	  
 	  public ProductBean(){
 	    //costruttore vuoto
@@ -78,14 +77,6 @@ public class ProductBean {
 
 	  public void setDescrizione(String descrizione){
 	    this.descrizione = descrizione;
-	  }
-	  
-	  public String getTipo(){
-	    return tipo;  
-	  }
-
-	  public void setTipo(String tipo){
-	    this.tipo = tipo;
 	  }
 	  
 	}
