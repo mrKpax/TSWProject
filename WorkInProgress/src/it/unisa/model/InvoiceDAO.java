@@ -1,4 +1,4 @@
-package model;
+package it.unisa.model;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

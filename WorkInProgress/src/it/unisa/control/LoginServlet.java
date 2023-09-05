@@ -1,4 +1,4 @@
-package control;
+package it.unisa.control;
 
 import java.io.IOException; 
 import java.sql.SQLException;
@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import model.*;
+import it.unisa.model.*;
 
 public class LoginServlet extends HttpServlet {
 

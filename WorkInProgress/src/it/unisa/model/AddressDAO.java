@@ -1,4 +1,4 @@
-package model;
+package it.unisa.model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

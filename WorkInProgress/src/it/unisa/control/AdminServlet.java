@@ -1,6 +1,6 @@
-package control;
+package it.unisa.control;
 
-import java.io.IOException; 
+import java.io.IOException;  
 import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.servlet.annotation.MultipartConfig;
@@ -19,7 +19,7 @@ import java.nio.file.Paths;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import model.*; 
+import it.unisa.model.*; 
 
 @MultipartConfig
 public class AdminServlet extends HttpServlet {

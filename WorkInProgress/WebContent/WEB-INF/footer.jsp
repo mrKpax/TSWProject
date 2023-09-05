@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-import = "java.util.*, model.*" pageEncoding="UTF-8"%>
+import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 
 
 <!DOCTYPE html>

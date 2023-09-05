@@ -1,1 +1,4 @@
+WebContent/META-INF/context.xml
 /build/
+*.class
+WorkInProgress/.classpath

@@ -1,4 +1,4 @@
-package model;
+package it.unisa.model;
 
 import java.sql.Date;
 import java.time.LocalDate;

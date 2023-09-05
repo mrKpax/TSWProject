@@ -1,4 +1,4 @@
-package model;
+package it.unisa.model;
 
 public class CartProduct {
 	  
