@@ -193,7 +193,7 @@ public class ProductDAO {
 
     ArrayList<ProductBean> products = new ArrayList<ProductBean>();
 
-    String selectSQL = "SELECT * FROM " + TABLE + " WHERE LIMIT 10";
+    String selectSQL = "SELECT * FROM " + TABLE + " LIMIT 10";
 
     try{
       connection = ds.getConnection();
@@ -204,7 +204,7 @@ public class ProductDAO {
       while(rs.next()){
     	ProductBean product = new ProductBean();
 
-    	product.setId(rs.getInt("id_prodotto"));
+    	product.setId(rs.getInt("id"));
     	product.setNome(rs.getString("nome"));
     	product.setCategoria(rs.getString("categoria"));
     	product.setMarca(rs.getString("marca"));
