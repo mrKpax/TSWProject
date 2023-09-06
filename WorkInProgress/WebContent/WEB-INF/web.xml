@@ -47,4 +47,13 @@
     <url-pattern>/registration</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <servlet-name> CatalogServlet </servlet-name>
+    <servlet-class>it.unisa.control.CatalogServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name> CatalogServlet </servlet-name>
+    <url-pattern>/catalog</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
