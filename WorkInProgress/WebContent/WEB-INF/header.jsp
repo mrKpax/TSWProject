@@ -49,7 +49,7 @@ ClientBean clientbean = (ClientBean) request.getSession().getAttribute("utente")
   }
   
   .main-header a:link,.main-header a:visited {
-    color: 0000cc;
+    color: #0000cc;
     padding: 1%;
     border-radius: 20px;
     margin:1%;

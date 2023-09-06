@@ -145,19 +145,19 @@ String error = (String) request.getAttribute("error");
           <div class="inputBox">
             <span class="error" id="errorUsername"></span>
             <span class="error" id="errorCheckUsername"></span>
-            <input id ="username" name="username" type="text" maxlenght="20" required autocomplete="off" placeholder="Ciro05" onblur="checkUsernameAjax()">
+            <input id ="username" name="username" type="text" maxlenght="20" required autocomplete="off" placeholder="username" onblur="checkUsernameAjax()">
             <label id="usernameLabel" for="username">Username:</label>
           </div>
 
           <div class="inputBox">
             <span class="error" id="errorNome"></span>
-            <input id="nome" name="nome" type="text" maxlenght="30" required autocomplete="off" placeholder="Ciro">
+            <input id="nome" name="nome" type="text" maxlenght="30" required autocomplete="off" placeholder="nome">
             <label id="nomeLabel" for="nome">Nome:</label>
           </div>
 
           <div class="inputBox">
             <span class="error" id="errorCognome"></span>
-            <input id="cognome" name="cognome" type="text" maxlenght="30" required autocomplete="off" placeholder="Esposito">
+            <input id="cognome" name="cognome" type="text" maxlenght="30" required autocomplete="off" placeholder="cognome">
             <label id="cognomeLabel" for="cognome">Cognome:</label>
           </div>
 
@@ -169,19 +169,19 @@ String error = (String) request.getAttribute("error");
 
           <div class="inputBox">
             <span class="error" id="errorIndirizzo"></span>
-            <input id="indirizzo" name="indirizzo" type="text" maxlenght="50" autocomplete="off" required placeholder="via Roma 69">
+            <input id="indirizzo" name="indirizzo" type="text" maxlenght="50" autocomplete="off" required placeholder="via Roma 10">
             <label id="indirizzoLabel" for="indirizzo">Via:</label>
           </div>
 
           <div class="inputBox">
             <span class="error" id="errorCitta"></span>
-            <input id="citta" name="citta" type="text" maxlenght="40" required autocomplete="off" placeholder="Ottaviano">
+            <input id="citta" name="citta" type="text" maxlenght="40" required autocomplete="off" placeholder="Fisciano">
             <label id="cittaLabel" for="citta">Città:</label>
           </div>
 
           <div class="inputBox">
             <span class="error" id="errorProvincia"></span>
-            <input id="provincia" name="provincia" type="text" maxlenght="40" autocomplete="off" required placeholder="Napoli">
+            <input id="provincia" name="provincia" type="text" maxlenght="40" autocomplete="off" required placeholder="Salerno">
             <label id="provinciaLabel" for="provincia">Provincia:</label>
           </div>
 
@@ -193,7 +193,7 @@ String error = (String) request.getAttribute("error");
 
           <div class="inputBox">
             <span class="error" id="errorTelefono"></span>
-            <input id="telefono" name="telefono" type="text" maxlenght="12" required autocomplete="off" placeholder="000000000000">
+            <input id="telefono" name="telefono" type="text" maxlenght="12" required autocomplete="off" placeholder="390001122333">
             <label id="telefonoLabel" for=telefono">Cellulare:</label>
           </div>
           <div class="footerContainer">
