@@ -135,18 +135,18 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
                 </div>
 
                 <div class="inputBox">
-                    <input id="password" name="password" type="password" maxlenght="20" required placeholder="password123" autocomplete="off">
+                    <input id="password" name="password" type="password" maxlenght="30" required placeholder="password123" autocomplete="off">
                     <label id="passwordLabel" for="password">Password:</label>
                 </div>
 
                 <input type="hidden" name="action" value="login">
                 <div class="submitContainer">
-                    <input class="submit" type="submit" value="Submit">
+                    <input class="submit" type="submit" value="Invia">
                 </div>
                 <div class="link">
-                    <span>Non sei registrato? <a href= "registration"> Registrati ora! </a></span></br>
-                    </br>
-                    <span>Ritorna alla <a href="home"> home </a></span>
+                    <span>Non sei registrato? <a href= "registration"> Registrati ora! </a></span> <br>
+                    <br>
+                    <span>Torna alla<a href="home"> home </a></span>
                 </div>
             </div>
         </div>
