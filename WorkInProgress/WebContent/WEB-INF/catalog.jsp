@@ -8,147 +8,115 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
     <title> WorkInProgress Catalog </title>
     <link rel="stylesheet" type="text/css" href="./styles/catalogStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <style>
-    
-    
-        .grid-container {
-            display: grid;
-            grid-template-columns: 20% 80% ;
-            grid-template-rows: auto auto auto ;
-            gap: 60px;
+    	.grid-container {
+        	display: grid;
+            grid-template-columns: 20% 80%;
+            grid-template-rows: auto auto auto;
             gap: 10px;
-            background-color: white;
+            background-color: #ffffff;
         }
     
         .grid-container > div {
-
-
-            
-            font-size:30px;
-        
-        
+            font-size: 20px;
         }
         
         .catalogo-container{
-
-        width: 100%;
-          height: 100%;
-          
-    }
+       		width: 100%;
+          	height: 100%;
+   		}
         
-        .catalogo{
-        
+        .catalogo{       
             display: flex;
             font-size:20px;
             flex-wrap: wrap;
             flex-direction: row;
-            height: auto;
-        
+            height: auto;        
         }
         
-       
-        
-        .card {
-
-             flex : 0 0 25%;
-             background: rgba(240,240,240);
-             border: 1px solid #634B66;
-             border-radius: 10px;
-             margin: 1%;
-             text-align: center;
-             padding : 2%;
-            
-             
+        .card{
+            flex : 0 0 25%;
+            background: rgba(240,240,240);
+            border: 1px solid #634B66;
+            border-radius: 10px;
+            margin: 1%;
+            text-align: center;
+            padding : 2%;                        
         }
 
         .catalogo img {
-          width: 80%;
-          height: 65%;
-          transition: transform .2s;
-          border: 1px solid #634B66;
-          border-radius: 3px;
-        
+          	width: 80%;
+         	height: 65%;
+          	transition: transform .2s;
+          	border: 1px solid #634B66;
+          	border-radius: 3px;
         }
         
         .catalogo img:hover {
-          -ms-transform: scale(1.1); /* IE 9 */
-          -webkit-transform: scale(1.1); /* Safari 3-8 */
-          transform: scale(1.1); 
+          	-ms-transform: scale(1.1); /* IE 9 */
+          	-webkit-transform: scale(1.1); /* Safari 3-8 */
+          	transform: scale(1.1); 
         }
         
         .catalogo p,.catalogo a{
-         font-family: "Times New Roman", serif, sans-serif; 
-         font-size: 18px;
-        
+         	font-family: "Times New Roman", serif, sans-serif; 
+         	font-size: 18px;
         }
         
-        .card a:link,.card a:visited {
-          
-          color: black;
-          
-          padding: 2%;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
+        .card a:link,.card a:visited {          
+          	color: black;         
+          	padding: 2%;
+          	text-align: center;
+          	text-decoration: none;
+          	display: inline-block;
         }
         
-        .card a:hover,.card a:active {
-        
-          color: #AEA4B4;
-          padding: 2%;
-         
+        .card a:hover,.card a:active {       
+          	color: #AEA4B4;
+          	padding: 2%;         
         }
         
         .filter-container{
-
-        width: 100%;
-          height: 100%;
-        border: 1px solid  #3C6A5F;
-        padding:5%;
-        background: rgba(240,240,240);
-        border-radius:5px;
-        overflow-y: hidden;
-        padding-bottom: 0;
-
-         }
+        	width: 100%;
+          	height: 100%;
+        	border: 1px solid  #3C6A5F;
+        	padding:5%;
+        	background: rgba(240,240,240);
+        	border-radius:5px;
+        	overflow-y: hidden;
+        	padding-bottom: 0;
+        }
 
         .filter{
-
             display: flex;
             font-size:17px;
             flex-wrap: wrap;
             flex-direction: column;
             height: auto;
-            padding:2%;
-        
-        
-
+            padding:2%;                
         }
         
         .macro{
-
-          width: auto;
-          height: auto;
-          margin-top:10px;
-        margin-bottom:10px;
-          
-          color: #634B66;
-
-         }
-        .checkboxInterne{
-            
+          	width: auto;
+          	height: auto;
+          	margin-top:10px;
+        	margin-bottom:10px;          
+          	color: #634B66;
+        }
+         
+        .checkboxInterne{	            
             text-align:left;
             border-top-style: double;
             border-bottom-style: double;
             border-color: #634B66;
             padding: 2%;
             margin-top:5px;
-            padding-left:20%;
-        
+            padding-left:20%;        
         }
-        .macro input[type="checkbox"]{
-        accent-color: #634B66;
         
+        .macro input[type="checkbox"]{
+        	accent-color: #634B66;        
         }
         
         .searchbar input[type="text"]{
@@ -157,175 +125,152 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
             width: 30%;
             height: auto;
             border-top: solid;
-        border-bottom: solid;
-        
-    
+        	border-bottom: solid;            
         }
         
         h2{
-        font-size: 30px;
-        color: #634B66;
-        text-align:center;
-        
+        	font-size: 20px;
+        	color: #634B66;
+        	text-align:center;        
         }
         
-            button {
-              padding: 5px 10px;
-              margin: 0 5px;
-              border: 2px solid #634B66;
-              border-radius: 10px;
-              background-color: #fff;
-              cursor: pointer;
-              text-align: center;
-              font-size: 18px;
-              letter-spacing: 1px;
-             font-family: "Times New Roman", serif, sans-serif;
-            }
+		button {
+          	padding: 5px 10px;
+      	   	margin: 0 5px;
+            border: 2px solid #634B66;
+            border-radius: 10px;
+            background-color: #fff;
+            cursor: pointer;
+            text-align: center;
+            font-size: 18px;
+            letter-spacing: 1px;
+           	font-family: "Times New Roman", serif, sans-serif;
+        }
             
-            button:hover {
-              color: white;
-              background-color: #634B66;
-            }
+        button:hover {
+           	color: white;
+            background-color: #634B66;
+        }
             
-            button:active {
-              transform: scale(0.9);
-            }
+        button:active {
+           	transform: scale(0.9);
+        }
             
+        .categoria {
+            padding: 5px 10px;
+            margin: 0 5px;
+            transition: transform .5s;
+            border-radius:0;
+            border:none;
+            color: #634B66;
+            cursor: pointer;
+            text-align: center;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+        
+        .categoria:active {
+           	transform: scale(0.9);
+        }
             
-            .categoria {
-              padding: 5px 10px;
-              margin: 0 5px;
-              transition: transform .5s;
-              border-radius:0;
-              border:none;
-              color: #634B66;
-              cursor: pointer;
-              text-align: center;
-              font-size: 18px;
-              letter-spacing: 1px;
-            }
-            
-            .categoria:active {
-              transform: scale(0.9);
-            }
-            
-            .categoria:hover {
-              color: #634B66;
-              background-color: white;
+        .categoria:hover {
+           	color: #634B66;
+          	background-color: white;
             border-bottom: 1px solid #634B66;
-            
-            }
+        }
         
         @media screen and (max-width: 880px){
-
-        .searchbar input[type="text"]{
-          
-            width: 30%;
-        }
+       		.searchbar input[type="text"]{
+          		width: 30%;
+        	}
         
-        .categoria {
-          display:none;
-
-        }
+        	.categoria {
+          		display:none;
+			}
         
-        .catalogo{
-         
-          font-size:17px;
+        	.catalogo{
+          		font-size:17px;
+          	}
+          	
+        	.card {
+				flex : 0 0 40%;
+        	}
 
-        }
-        .card {
+        	.catalogo img {
+         		width: 80%;
+          		height: 65%;
+			}
+			
+        	h2{
+          		font-size: 20px;
+        	}
+		}
 
-          flex : 0 0 40%;
-        }
+		@media screen and (max-width: 1030px){
+		  	.searchbar input[type="text"]{
+    			width: 30%;
+   			}
+   			
+  			.categoria {
+    			padding: 5px 7px;
+    			margin: 0 3px;
+    			font-size: 15px;   
+ 			}  
+		}
 
-        .catalogo img {
-          width: 80%;
-          height: 65%;
-
-        }
-        h2{
-          font-size: 20px;
-        }
-}
-
-@media screen and (max-width: 1030px){
-
-  .searchbar input[type="text"]{
-    width: 30%;
-   
-  }
-  .categoria {
-    padding: 5px 7px;
-    margin: 0 3px;
-    font-size: 15px;
+		@media screen and (max-width: 430px){
+  			.searchbar input[type="text"]{
+   		 		width: 40%;
+    		}
+    		
+    		h2,h3{
+      			font-size: 15px;
+    		}
     
-  }
-  
-  
-}
-
-@media screen and (max-width: 430px){
-
-  .searchbar input[type="text"]{
-    width: 60%;
-    }
-    h2,h3{
-      font-size: 15px;
-    }
+    		.searchbar{
+      			padding-top:10%;
+    		}
     
-    .searchbar{
-      padding-top:10%;
-    }
+    		button {
+      			padding: 2px 2px;
+      			font-size: 10px;
+      			letter-spacing: 0px;
+    		}
+    		
+    		.filter-container{      
+      			padding:3%;
+      		}
     
-    button {
-      padding: 2px 2px;
-      font-size: 10px;
-      letter-spacing: 0px;
-    }
-    .filter-container{
-      
-      padding:3%;
-      
-    }
+    		.filter{
+      			font-size:13px;
+			}
+
+    		.macro{
+      			margin-top:7px;
+      			margin-bottom:7px;
+			}
+			
+  			.checkboxInterne{   
+      			padding-left:15%;
+    		}
+    		
+    		.macro input[type="checkbox"]{
+      			accent-color: #634B66;
+      			transform: scale(0.6);
+    		}
+    		
+    		.filter-container input[type="number"]{
+      			transform: scale(0.7);
+    		}
+    		
+    		.filter-container button{
+      			font-size: 13px;
+    		}
     
-    .filter{
-
-      font-size:13px;
-
-    }
-
-    .macro{
-
-      margin-top:7px;
-      margin-bottom:7px;
-
-    }
-    .checkboxInterne{
-      
-      padding-left:15%;
-
-    }
-    .macro input[type="checkbox"]{
-      accent-color: #634B66;
-      transform: scale(0.6);
-
-    }
-    .filter-container input[type="number"]{
-      transform: scale(0.7);
-    }
-    .filter-container button{
-      font-size: 13px;
-    }
-    
-    .card {
-
-      flex : 0 0 90%;
-    }
-
-}
-
-
-
+    		.card {
+      			flex : 0 0 90%;
+    		}
+		}
     </style>
 </head>
 
@@ -416,52 +361,35 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
     
     <script>
         $(document).ready(function(){
-        	$("#filter").css("display", "none");
-        	$(".checkboxInterne").css("display", "none");
-            
+        	$(".filter").css("display", "none");
+        	$(".checkboxInterne").css("display", "none");            
             $.ajax({
                 url: 'catalog',
                 type: 'GET',
                 success: function(resp) {
-                    $("#catalogTable").empty();
-                    
+                    $("#catalogTable").empty();                   
                     for (let item of resp) {
-                        $("#catalogTable").append("<div class='card'><a target='_blank' href='images//" +item.immagine+"'><img src='images//" +item.immagine+"' alt='"+item.nome+"'></a><p>"+item.nome+"</p><p>"+item.prezzo+"€</p><a href='details?id="+item.id+"'> <i class='fa fa-eye' aria-hidden='true''></i></a><a href='cart?action=add&id="+item.id+"'><i class='fa fa-cart-plus' aria-hidden='true'></i></a></div>");
-                        
-                        
-                        
+                        $("#catalogTable").append("<div class='card'><a target='_blank' href='images//" +item.immagine+"'><img src='images//" +item.immagine+"' alt='"+item.nome+"'></a><p>"+item.nome+"</p><p>"+item.prezzo+"€</p><a href='details?id="+item.id+"'> <i class='fa fa-eye' aria-hidden='true''></i></a><a href='cart?action=add&id="+item.id+"'><i class='fa fa-cart-plus' aria-hidden='true'></i></a></div>");                                                                        
+                    }
+                }
+            });                                  
+        });
+                 
+        $("button.categoria").click(function() {
+            var fired_button = $(this).val();
+ 
+            $.ajax({
+             	url: 'catalog?action=searchByCategory',
+                type: 'GET',
+                data : {category : fired_button},
+                success: function(resp) {
+                	$("#catalogTable").empty();
+                    for (let item of resp) {
+                    	$("#catalogTable").append("<div class='card'><a target='_blank' href='images//" +item.immagine+"'><img src='images//" +item.immagine+"' alt='"+item.nome+"'></a><p>"+item.nome+"</p><p>"+item.prezzo+"€</p><a href='details?id="+item.id+"'> <i class='fa fa-eye' aria-hidden='true''></i></a><a href='cart?action=add&id="+item.id+"'><i class='fa fa-cart-plus' aria-hidden='true'></i></a></div>");
                     }
                 }
             });
-            
-          
-            
         });
-        
-      
-    
-    
-         
-         $("button.categoria").click(function() {
-             var fired_button = $(this).val();
-             
-             $.ajax({
-                 url: 'catalog?action=searchByCategory',
-                 type: 'GET',
-                 data : {category : fired_button},
-                 success: function(resp) {
-                     $("#catalogTable").empty();
-                     for (let item of resp) {
-                         $("#catalogTable").append("<div class='card'><a target='_blank' href='images//" +item.immagine+"'><img src='images//" +item.immagine+"' alt='"+item.nome+"'></a><p>"+item.nome+"</p><p>"+item.prezzo+"€</p><a href='details?id="+item.id+"'> <i class='fa fa-eye' aria-hidden='true''></i></a><a href='cart?action=add&id="+item.id+"'><i class='fa fa-cart-plus' aria-hidden='true'></i></a></div>");
-                     }
-                 }
-             });
-             
-         });
-         
-         
-
-     
     
         function doSuggest(){
             var keyword = $('#search').val();
@@ -549,9 +477,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
                     });
 
                 }
-                
-        
-
+                        
         function reset() {
             $("#search:text").val("");
             $("#prezzo").prop("checked", false);

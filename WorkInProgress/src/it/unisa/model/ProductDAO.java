@@ -34,7 +34,7 @@ public class ProductDAO {
     //costruttore vuoto
   }
   
-  public synchronized int doSave(ProductBean jewel) throws SQLException{
+  public synchronized int doSave(ProductBean product) throws SQLException{
     //INSERISCE UN PRODOTTO NEL DATABASE
     Connection connection = null;
     PreparedStatement preparedStatement = null;
@@ -46,13 +46,13 @@ public class ProductDAO {
     try {
       connection = ds.getConnection();
       preparedStatement = connection.prepareStatement(insertSQL,Statement.RETURN_GENERATED_KEYS);
-      preparedStatement.setString(1, jewel.getNome());
-      preparedStatement.setString(2, jewel.getCategoria());
-      preparedStatement.setString(3, jewel.getMarca());
-      preparedStatement.setString(4, jewel.getImmagine());
-      preparedStatement.setFloat(6, jewel.getIVA());
-      preparedStatement.setFloat(7, jewel.getPrezzo());
-      preparedStatement.setString(8, jewel.getDescrizione());
+      preparedStatement.setString(1, product.getNome());
+      preparedStatement.setString(2, product.getCategoria());
+      preparedStatement.setString(3, product.getMarca());
+      preparedStatement.setString(4, product.getImmagine());
+      preparedStatement.setFloat(6, product.getIVA());
+      preparedStatement.setFloat(7, product.getPrezzo());
+      preparedStatement.setString(8, product.getDescrizione());
 
       preparedStatement.executeUpdate();
 
@@ -81,7 +81,7 @@ public class ProductDAO {
     Connection connection = null;
     PreparedStatement preparedStatement = null;
 
-    String selectSQL = "SELECT * FROM " + TABLE + " WHERE id_prodotto = ?";
+    String selectSQL = "SELECT * FROM " + TABLE + " WHERE id = ?";
     ProductBean product = new ProductBean();
     
     try {
@@ -93,7 +93,7 @@ public class ProductDAO {
 
       while (rs.next()) {
     
-        product.setId(rs.getInt("id_prodotto"));
+        product.setId(rs.getInt("id"));
         product.setNome(rs.getString("nome"));
         product.setCategoria(rs.getString("categoria"));
         product.setMarca(rs.getString("marca"));
@@ -123,7 +123,7 @@ public class ProductDAO {
     
     int result = 0;
     
-    String deleteSQL = "DELETE FROM " + TABLE + " WHERE id_prodotto = ?";
+    String deleteSQL = "DELETE FROM " + TABLE + " WHERE id = ?";
     try {
       connection = ds.getConnection();
       preparedStatement = connection.prepareStatement(deleteSQL);
@@ -162,7 +162,7 @@ public class ProductDAO {
       while(rs.next()){
     	ProductBean product = new ProductBean();
         
-    	product.setId(rs.getInt("id_prodotto"));
+    	product.setId(rs.getInt("id"));
     	product.setNome(rs.getString("nome"));
     	product.setCategoria(rs.getString("categoria"));
     	product.setMarca(rs.getString("marca"));
@@ -235,7 +235,7 @@ public class ProductDAO {
     
     int result = 0;
     
-    String updateSQL = "UPDATE "+ TABLE+ " SET nome = ?, categoria = ?, marca = ?, immagine = ?, IVA = ?, prezzo = ?, descrizione = ?" + "WHERE id_prodotto = ?";
+    String updateSQL = "UPDATE "+ TABLE+ " SET nome = ?, categoria = ?, marca = ?, immagine = ?, IVA = ?, prezzo = ?, descrizione = ?" + "WHERE id = ?";
     
     try{
       connection = ds.getConnection();
@@ -283,7 +283,7 @@ public class ProductDAO {
 
       while (rs.next()) {
     	ProductBean product = new ProductBean();
-    	product.setId(rs.getInt("id_prodotto"));
+    	product.setId(rs.getInt("id"));
     	product.setNome(rs.getString("nome"));
     	product.setCategoria(rs.getString("categoria"));
     	product.setMarca(rs.getString("marca"));
@@ -326,7 +326,7 @@ public class ProductDAO {
 
       while (rs.next()) {
     	ProductBean product = new ProductBean();
-    	product.setId(rs.getInt("id_prodotto"));
+    	product.setId(rs.getInt("id"));
     	product.setNome(rs.getString("nome"));
     	product.setCategoria(rs.getString("categoria"));
     	product.setMarca(rs.getString("marca"));
@@ -368,7 +368,7 @@ public class ProductDAO {
 
       while (rs.next()) {
     	ProductBean product = new ProductBean();
-    	product.setId(rs.getInt("id_prodotto"));
+    	product.setId(rs.getInt("id"));
     	product.setNome(rs.getString("nome"));
     	product.setCategoria(rs.getString("categoria"));
     	product.setMarca(rs.getString("marca"));
@@ -409,7 +409,7 @@ public class ProductDAO {
 
       while (rs.next()) {
     	ProductBean product = new ProductBean();
-    	product.setId(rs.getInt("id_prodotto"));
+    	product.setId(rs.getInt("id"));
         product.setNome(rs.getString("nome"));
         product.setCategoria(rs.getString("categoria"));
         product.setMarca(rs.getString("marca"));

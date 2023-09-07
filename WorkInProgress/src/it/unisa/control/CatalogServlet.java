@@ -80,33 +80,17 @@ public class CatalogServlet extends HttpServlet {
          if (!request.getParameter("prezzo_a").equals(""))
              prezzo_a = Float.parseFloat(request.getParameter("prezzo_a"));
 
-         String materiale = request.getParameter("materiale");
-         String argento = request.getParameter("argento");
-         String oro = request.getParameter("oro");
-         String ororosa = request.getParameter("ororosa");
-
          String categoria = request.getParameter("categoria");
-         String collana = request.getParameter("collana");
-         String bracciale = request.getParameter("bracciale");
-         String anello = request.getParameter("anello");
-         String orecchini = request.getParameter("orecchini");
-
-         String pietra = request.getParameter("pietra");
-         String giada = request.getParameter("giada");
-         String ametista = request.getParameter("ametista");
-         String citrino = request.getParameter("citrino");
-         String acquamarina = request.getParameter("acquamarina");
-         String quarzo = request.getParameter("quarzo");
-         String quarzorosa = request.getParameter("quarzorosa");
+         String attrezzatura = request.getParameter("attrezzatura");
+         String abbigliamento = request.getParameter("abbigliamento");
+         String fab = request.getParameter("fab");
+         String allenamenti = request.getParameter("allenamenti");
          
          //viene prima preso tutto dalla request ed in seguito aggiunti tutti i filtri
-         if (!pietra.equals("") || !materiale.equals("") || !categoria.equals("")){
-             sql = " AND (prezzo > "+ prezzo_da +" AND prezzo < "+ prezzo_a + ") AND (materiale = '"+ argento + "' OR materiale = '" + oro + "' OR materiale='" + ororosa ;
-             sql+= "' OR categoria = '"+collana+"' OR categoria = '"+bracciale+"' OR categoria ='"+anello+"' OR categoria ='"+orecchini;
-             sql+= "' OR pietra = '"+giada+"' OR pietra = '"+ametista+"' OR pietra = '"+citrino+"' OR pietra = '"+acquamarina+"' OR pietra = '"+quarzo+"' OR pietra = '"+quarzorosa + "')";
-
+         if (!categoria.equals("")){
+             sql=" AND (prezzo > "+prezzo_da+" AND prezzo < "+prezzo_a+") AND (categoria = '"+attrezzatura+"' OR categoria = '"+abbigliamento+"' OR categoria ='"+fab+"' OR categoria ='"+allenamenti+"')";
          }//se tutti i filtri sono vuoti, di default viene cercato per prezzo
-             else if (pietra.equals("") && materiale.equals("") && categoria.equals("")){
+             else if (categoria.equals("")){
                  sql = " AND prezzo > "+ prezzo_da +" AND prezzo < "+ prezzo_a;
              }
 
