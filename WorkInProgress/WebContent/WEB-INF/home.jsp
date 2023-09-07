@@ -17,20 +17,20 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
   grid-template-columns: auto ;
   grid-template-rows: auto auto auto auto auto;
   gap: 60px;
-  background: rgba(250,250,250);
+  background: #ffffff;
  
   
 }
 
 .grid-container > div {
-
   font-size: 30px;
 }
 
 .slider-prodotti {
   width: 100%;
   height: 100%;
-  overflow-x: auto;
+  overflow-x: hidden
+;
   overflow-y: hidden;
   padding:0.5%;
   background: transparent;
@@ -47,7 +47,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
   
  flex : 0 0 20%;
  background: rgba(240,240,240);
- border: 2px solid #84A8A1;
+ border: 2px solid #0000ff;
   border-radius: 20px;
   margin: 1%;
  text-align: center;
@@ -60,7 +60,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
   width: 60%;
   height: 50%;
   transition: transform .2s;
-  border: 2px solid #84A8A1;
+  border: 2px solid #0000ff;
   border-radius: 10px;
   
 }
@@ -72,7 +72,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 }
 
 .slider-container p,.slider-container a{
- font-family: "Times New Roman", serif, sans-serif; 
+ font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
  font-size: 20px;
 
 }
@@ -80,7 +80,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 .product-card a:link,.product-card a:visited {
   background-color: white;
   color: black;
-  border: 2px #84A8A1;
+  border: 2px #0000ff;
   padding: 5%;
   border-radius: 20px;
   
@@ -90,7 +90,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 }
 
 .product-card a:hover,.product-card a:active {
-  background-color: #4C8577;
+  background-color: #0000ff;
   color: white;
   padding: 5%;
   border-radius: 20px;
@@ -101,9 +101,9 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 0px;
   flex-direction: column;
- background-position: center; /* Center the image */
+  background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
 }
@@ -120,7 +120,6 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 
   font-family: "Times New Roman", serif, sans-serif; 
   font-size: 100%;
-  
   color: #000000;
 }
 
@@ -128,7 +127,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
   
   background: rgba(255,255,255,0.1);
   color: black;
-  border: 2px solid #84A8A1;
+  border: 2px solid #0000ff;
   padding: 5%;
   border-radius: 20px;
   
@@ -139,7 +138,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 }
 
 .content a:hover,.content a:active {
-  background-color: #4C8577;
+  background-color: #0000ff;
   color: white;
   border-radius: 20px;
 }
@@ -152,15 +151,15 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
  padding-bottom: 2%;
  border-top-style: double;
  border-bottom-style: double;
- border-color: #84A8A1;
+ border-color: #0000ff;
 }
 
-.prodotto{
+.attrezzatura{
   
   flex : 0 0 30%;
   width : 32%;
   height: 45%;
-  background-image: url("images/giada.jpg");
+  background-image: url("images/attrezzatura.jpg");
   overflow: hidden;
   margin :1%;
   text-align : center;
@@ -168,17 +167,17 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
   border-radius: 10px;
-  border: 2px solid #84A8A1;
+  border: 2px solid #0000ff;
   
   
   }
   
-  .prodotto1{
+  .accessori{
 
     flex : 0 0 30%;
     width : 32%;
     height: 45%;
-    background-image: url("images/ametista.jpg");
+    background-image: url("images/accessori.jpg");
     overflow: hidden;
     margin :1%;
     text-align : center;
@@ -186,16 +185,16 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
     border-radius: 10px;
-    border: 2px solid #84A8A1;
+    border: 2px solid #0000ff;
     
 
   }
-  .prodotto2{
+  .foodandbeverage{
 
     flex : 0 0 30%;
     width : 32%;
     height: 45%;
-    background-image: url("images/quarzorosa.jpg");
+    background-image: url("images/foodandbeverage.jpg");
     overflow: hidden;
     margin :1%;
     text-align : center;
@@ -203,15 +202,15 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
     border-radius: 10px;
-    border: 2px solid #84A8A1;
+    border: 2px solid #0000ff;
 
   }
-  .prodotto3{
+  .allenamenti{
 
     flex : 0 0 30%;
     width : 32%;
     height: 45%;
-    background-image: url("images/quarzo.png");
+    background-image: url("images/allenamenti.jpg");
     overflow: hidden;
     margin :1%;
     text-align : center;
@@ -219,49 +218,19 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
     border-radius: 10px;
-    border: 2px solid #84A8A1;
+    border: 2px solid #0000ff;
 
-  }
-  .prodotto4{
-
-    flex : 0 0 30%;
-    width : 32%;
-    height: 45%;
-    background-image: url("images/quarzo-citrino.jpg");
-    overflow: hidden;
-    margin :1%;
-    text-align : center;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover;
-    border-radius: 10px;
-    border: 2px solid #84A8A1;
-  }
-  .prodotto5{
-
-    flex : 0 0 30%;
-    width : 32%;
-    height: 45%;
-    background-image: url("images/aquamarine.jpg");
-    overflow: hidden;
-    margin :1%;
-    text-align : center;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover;
-    border-radius: 10px;
-    border: 2px solid #84A8A1;
   }
   
   .testo{
-    font-family: "Times New Roman", serif, sans-serif; 
+    font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
     font-size: 50%;
     opacity: 0.0;
     transition: 0.5s;
     
   }
   .testo:hover {
-    font-family: "Times New Roman", serif, sans-serif; 
+    font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
     font-size: 50%;
     opacity: 0.7;
     background-color:white;
@@ -273,19 +242,19 @@ h1{
 display: flex;
 justify-content: center;
 text-align: center;
-color: #4C8577;
+color: #0000ff;
 padding: 1%;
 border-top-style: double;
 border-bottom-style: double;
-border-color: #84A8A1;
-font-family: "Times New Roman", serif, sans-serif; 
+border-color: #0000ff;
+ font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
 
 
 }
 
 @media screen and (max-width: 880px){
 
-  .prodotto,.prodotto1,.prodotto2,.prodotto3,.prodotto4,.prodotto5{
+  .attrezzatura,.accessori,.foodandbeverage,.allenamenti{
 
   flex : 0 0 40%;
    width : 32%;
@@ -296,7 +265,7 @@ font-family: "Times New Roman", serif, sans-serif;
 
 @media screen and (max-width: 450px){
 
-  .prodotto,.prodotto1,.prodotto2,.prodotto3,.prodotto4,.prodotto5{
+  .attrezzatura,.accessori,.foodandbeverage,.allenamenti{
 
   flex : 0 0 90%;
   height: 16%;
@@ -350,69 +319,46 @@ font-family: "Times New Roman", serif, sans-serif;
       
       <div class="slider-prodotti">
         
-              <div class="pietra">
+              <div class="attrezzatura">
                     <div class="testo">
-                      <h3>Jade</h3>
-                      <p>Jade, a symbol of harmony and purity, is one of the most cherished gemstones worldwide. With its captivating shades of green, Jade exudes a sense of serenity and balance. It's a gemstone revered for its spiritual significance and believed to bring prosperity and good fortune.</p>
-                      <p>Properties: Jade belongs to two mineral groups: nephrite and jadeite. Nephrite jade is usually found in shades of dark green, while jadeite jade offers a wider color spectrum. They are ideal for crafting intricate jewelry pieces that stand the test of time.</p>
+                      <h3>Attrezzatura</h3>
+                      <p>La categoria "Attrezzatura" nel nostro e-commerce è il luogo ideale per trovare tutto ciò di cui hai bisogno per raggiungere i tuoi obiettivi di fitness e costruire un fisico forte e scolpito. Sia tu un principiante nel mondo del bodybuilding o un atleta esperto, abbiamo una vasta selezione di attrezzature di alta qualità per soddisfare le tue esigenze.</p>
+					  <p>Dall'allenamento con i pesi liberi alla forza funzionale, dal cardio al recupero post-allenamento, la nostra categoria di attrezzature offre una gamma completa di prodotti che ti aiuteranno a ottenere risultati straordinari.</p>
                     </div>
               </div> 
               
-              <div class="pietra1">
+              <div class="accessori">
                 
                     <div class="testo">
-                      <h3>Amethyst</h3>
-                      <p>The Amethyst is bewitching gemstone renowned for its stunning purple hues. This gem exudes an aura of elegance and mystique, making it a popular choice for both modern and classic jewelry designs. Amethyst has fascinated civilizations throughout history.</p>
-                      <p>Properties: Amethyst is a purple variety of quartz and owes its alluring color to trace amounts of iron and aluminum in its crystal structure. Amethyst offers excellent durability, ensuring that your cherished pieces retain their brilliance for generations to come.</p>
+                      <h3>Accessori</h3>
+                      <p>La categoria "Accessori" offre una vasta selezione di accessori di alta qualità che ti aiuteranno a ottimizzare il tuo allenamento, migliorare le prestazioni e raggiungere i tuoi obiettivi di fitness.</p>
+                      <p>Gli accessori sono spesso il tocco finale che fa la differenza nei tuoi allenamenti, offrendo comfort, sicurezza e versatilità. Un buon paio di guanti, una cintura resistente, uno comodo shaker ed un abbigliamento adeguato non potranno fare altro che migliorare la tua esperienza durante l'allenamento. </p>
                     </div>
                   
               </div> 
               
-              <div class="pietra2">
+              <div class="foodandbeverage">
                 
                   <div class="testo">
-                    <h3>Rose Quartz</h3>
-                    <p>Embrace the tender allure of Rose Quartz, the gem of love and compassion. With its delicate shades of pink, this gemstone exudes a soothing energy that nurtures the heart and fosters emotional healing. Rose Quartz captures the essence of affection.</p>
-                    <p>Properties: Rose Quartz is a member of the quartz family and obtains its soft pink color from traces of titanium, iron, or manganese.This gem ensures your jewelry maintains its delightful pink allure while offering a remarkable combination of durability and elegance.</p>
+                    <h3>Food and Beverage</h3>
+                    <p>La categoria "Food and Beverage" offre un'ampia selezione di prodotti alimentari e bevande appositamente selezionati per supportare il tuo regime di allenamento, aiutarti a recuperare e massimizzare i tuoi risultati nel mondo del bodybuilding e non solo.</p>
+                  	<p>Energy Drink, barrette proteiche, integratori alimentari, alimenti biologici e naturali, bevande per il recupero e cibi fit sono solo alcuni dei prodotti che questa sezione ha da offrire.</p>
                   </div>
              
               </div>
               
               
-              <div class="pietra3">
+              <div class="allenamenti">
                
                   <div class="testo">
-                    <h3>Quartz</h3>
-                    <p>A versatile and timeless beauty, Quartz enchants with its clear, crystal-like appearance. Known as the "Master Healer" in the gem world, Quartz is believed to amplify energies and promote clarity of thought. Its neutrality allows it to complement any style effortlessly.</p>
-                    <p>Properties: Quartz is composed of silicon and oxygen, forming a crystal lattice structure. This gemstone boasts excellent scratch resistance, ensuring your Quartz jewelry stays brilliant for years to come.</p>
+                    <h3>Allenamenti</h3>
+                    <p>La sezione "Allenamenti" è una peculiarità del nostro sito. Qui potrai trovare piani di allenamento per tutte le età e per tutti i livelli di esperienza: che tu sia un principiante o un atleta esperto, troverai l'allenamento giusto per te.</p>
+                    <p>Una selezione di Workouts preparati e studiati dai più attenti coach per stimolare al meglio qualsiasi tipo di fisico è soltanto uno dei molteplici punti di forza di questo e-commerce. Questa categoria ha molto altro da offrire, vai a scoprirlo!</p>
                   </div>
                 
               </div> 
-              
-              <div class="pietra4">
-               
-                  <div class="testo">
-                    <h3>Citrine</h3>
-                    <p>Immerse yourself in the warmth of Citrine, a gemstone that embodies the sun's radiance. With its golden-yellow hues, Citrine infuses joy, success, and abundance into every facet of life. This gem shines as bright as the sun, casting a warm glow on those who wear it.</p>
-                    <p>Properties: Citrine is a variety of quartz colored by traces of iron in its crystal structure. Its Mohs hardness of 7 makes it a durable choice for jewelry, allowing you to flaunt your Citrine pieces with confidence and charm.</p>
-                  </div>
-             
-              </div> 
-              
-              <div class="pietra5">
-               
-                  <div class="testo">
-                    <h3>Aquamarine</h3>
-                    <p>Dive into the tranquil beauty of Aquamarine, reminiscent of the serene ocean waters. With its mesmerizing blue tones, this gemstone embodies a sense of calmness and clarity. Just like a refreshing seaside escape, Aquamarine rejuvenates the soul.</p>
-                    <p>Properties: Aquamarine is a variety of beryl, sharing its family with emeralds. Its captivating blue color comes from traces of iron in the crystal structure. With a hardness rating of 7.5 to 8 on the Mohs scale, Aquamarine ensures lasting brilliance for your cherished jewelry pieces.</p>
-                  </div>
-               
-              </div> 
         
       </div>
-      
-      <p style="text-align:center;"><a href="#1"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a><br> Go up!</p>
-       
       
       <div class="footer">
          <%@include file="/WEB-INF/footer.jsp" %>

@@ -6,7 +6,6 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Footer</title>
     <style>
     
@@ -22,7 +21,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
         height: auto;
         justify-content: center;
         border-top-style: double;
-        border-color: #84A8A1;
+        border-color: #0000ff;
     }
     
     .contattaci{
@@ -50,32 +49,32 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 
         display: flex;
         justify-content: center;
-        color: #4C8577;
+        color: #0000ff;
         padding: 1%;
         border-top-style: double;
         border-bottom-style: double;
-        border-color: #84A8A1;
-        font-family: "Times New Roman", serif, sans-serif;
+        border-color: #000000;
+        font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
         font-size: 95%;
     }
     .contattaci p, .informazioni p, .social p{
 
         display: flex;
         justify-content: center;
-        color: #18020C;
+        color: #000000;
         padding: 1%;
         font-size: 70%;
        
-        font-family: "Times New Roman", serif, sans-serif; 
+        font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
     }
     .informazioni a{
 
         display: flex;
         justify-content: center;
-        color: #18020C;
+        color: #000000;
         padding: 1%;
-        border-color: #84A8A1;
-        font-family: "Times New Roman", serif, sans-serif;
+        border-color: #0000ff;
+        font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
         font-size: 95%;
     }
     
@@ -83,21 +82,21 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
         color: #F166D9;
     }
     .icon-facebook:hover {
-        color: #3b5998;
+        color: #0000ff;
     }
     .icon-linkedin:hover {
         color: #0077B5;
     }
     .fa.fa-instagram{
-        font-size: 80%;
+        font-size: 100%;
     
     }
     .fa.fa-facebook{
-        font-size: 80%;
+        font-size: 100%;
 
     }
     .fa.fa-linkedin{
-        font-size: 80%;
+        font-size: 100%;
 
     }
     
@@ -138,10 +137,10 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 
 
         <div class="social">
-            <h1>Follow us!</h1>
-            <p class="icon-instagram"><i class="fa fa-instagram" aria-hidden="true"></i> Work_in_Progress</p>
-            <p class="icon-facebook"><i class="fa fa-facebook" aria-hidden="true"></i> Work_in_Progress</p>
-            <p class="icon-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i> Work_in_Progress</p>
+            <h1>Seguici!</h1>
+            <p class="icon-instagram"><i class="fa fa-instagram" aria-hidden="true"></i>&nbsp;Work_in_Progress</p>
+            <p class="icon-facebook"><i class="fa fa-facebook" aria-hidden="true"></i>&nbsp;Work_in_Progress</p>
+            <p class="icon-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i>&nbsp;Work_in_Progress</p>
 
 
         </div>
