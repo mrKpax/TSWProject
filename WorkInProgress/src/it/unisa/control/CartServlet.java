@@ -35,7 +35,7 @@ public class CartServlet extends HttpServlet {
             
         ClientBean client = (ClientBean) request.getSession().getAttribute("utente");
         
-        if (client!= null && client.getEmail().equals("WorkInProgress@gmail.com")) {
+        if (client!= null && client.getEmail().equals("JadeTear@gmail.com")) {
         	
         	 response.sendRedirect("home");
              return;
@@ -43,15 +43,15 @@ public class CartServlet extends HttpServlet {
         }
 
         String id = request.getParameter("id");
-
+        System.out.println("ID from request: " + id);
         String action = request.getParameter("action");
         if(action == null)
         	action = "seeCart"; 
 
-        ProductBean product = new ProductBean();
+        ProductBean Product = new ProductBean();
         
 		try {
-			product = model.doRetrieveByKey(Integer.parseInt(id));
+			Product = model.doRetrieveByKey(Integer.parseInt(id));
 		} catch (NumberFormatException e) {
 			 LOGGER.log( Level.SEVERE, e.toString(), e );
              
@@ -60,14 +60,18 @@ public class CartServlet extends HttpServlet {
             response.sendRedirect("generalError.jsp");
             return;
 		}
+         
             
-        if (action.equals("Delete from Cart"))
-            cart.removeProduct(product);
-
-        if (action.equals("Modify Amount")){
-                        cart.changeQuantity(product, Integer.parseInt(request.getParameter("quantity")));               
+        if (action.equals("add")){
+            cart.addProduct(Product);
+            }
+        if (action.equals("Modify Amount"))
+            cart.changeQuantity(Product, Integer.parseInt(request.getParameter("quantity")));
                         
-        }
+        if (action.equals("Delete from Cart"))
+            cart.removeProduct(Product);
+
+
             
         if (cart != null && cart.getProducts().size() != 0){ // "procedi al pagamento" : se l'utente non è loggato, lo porta alla login.jsp
             if(action.equalsIgnoreCase("buy")) {
