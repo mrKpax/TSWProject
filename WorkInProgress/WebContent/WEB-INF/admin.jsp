@@ -21,34 +21,57 @@ String error = (String) request.getAttribute("error");
                 gap: 10px;
             }
             
+            .title{
+                font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
+            	color: #000000;
+            }
+            
+            .subtitle{
+                font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
+            	color: #0000ff;
+            }
+            
+            label{
+                font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
+            	color: #0000ff;
+            }
+            
+            legend{
+                font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
+            	color: #0000ff;
+            }
+            
           input[type="submit"], input[type="reset"] {
                 height:60%;
                 border-radius: 5px;
-                border: 2px solid #4c8577;
+                border: 2px solid #0000ff;
                 cursor: pointer;
                 background-color: transparent;
                 transition: 0.5s;
                 text-transform: uppercase;
                 font-size: 11px;
                 letter-spacing: 2px;
-                margin-bottom: 1em;
-                color: #4c8577;
+                margin-bottom: 2em;
+                color: #0000ff;
+                font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
+                
             }
 
       input[type="submit"]:hover, input[type="reset"]:hover {
-            background-color: #4c8577;
+            background-color: #0000ff;
             color: white;
         }
         
             #load, #delete {
-            color: #AEA4B4;
-            border: 2px solid #AEA4B4;
+            color: #0000ff;
+            border: 2px solid #0000ff;
             }
             
            #load:hover, #delete:hover {
-            background-color: #AEA4B4;
+            background-color: #0000ff;
             color: white;
             }
+            
             
             
         </style>

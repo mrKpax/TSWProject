@@ -56,4 +56,40 @@
     <url-pattern>/catalog</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <servlet-name> CartServlet </servlet-name>
+    <servlet-class>it.unisa.control.CartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name> CartServlet </servlet-name>
+    <url-pattern>/cart</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name> AdminServlet </servlet-name>
+    <servlet-class>it.unisa.control.AdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name> AdminServlet </servlet-name>
+    <url-pattern>/admin</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name> PaymentServlet </servlet-name>
+    <servlet-class>it.unisa.control.PaymentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name> PaymentServlet </servlet-name>
+    <url-pattern>/payment</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name> ClientOrdersServlet </servlet-name>
+    <servlet-class>it.unisa.control.ClientOrdersServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name> ClientOrdersServlet </servlet-name>
+    <url-pattern>/clientorders</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

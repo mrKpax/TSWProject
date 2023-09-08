@@ -149,7 +149,8 @@ ClientBean clientbean = (ClientBean) request.getSession().getAttribute("utente")
                   
                   <a href="home">  Home  </a>
                   <a href="catalog">  Catalog  </a>
-                  <a href="admin?action=ordersByFilter"> My Orders </a>
+                  <a href="userdetails"> Account </a>
+                  <a href="clientorders"> My Orders </a>
         		  <a href="login?action=logout"> Logout </a>
                
               

@@ -123,6 +123,11 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
   color: #000000;
 }
 
+.button{
+	 font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
+	
+}
+
 .content a:link,.content a:visited {
   
   background: rgba(255,255,255,0.1);
@@ -222,6 +227,23 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 
   }
   
+  .abbigliamento{
+
+    flex : 0 0 30%;
+    width : 32%;
+    height: 45%;
+    background-image: url("images/abbigliamento.jpg");
+    overflow: hidden;
+    margin :1%;
+    text-align : center;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    border-radius: 10px;
+    border: 2px solid #0000ff;
+
+  }
+  
   .testo{
     font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
     font-size: 50%;
@@ -292,7 +314,7 @@ border-color: #0000ff;
           
           <h1>Work in Progress</h1>
           <p>Sfoglia il nostro catalogo </p>
-          <a href="catalog"> Catalogo </a>
+          <a href="catalog" class="button"> Catalogo </a>
         
         </div>
       
@@ -347,6 +369,15 @@ border-color: #0000ff;
              
               </div>
               
+              <div class="abbigliamento">
+               
+                  <div class="testo">
+                    <h3>Abbigliamento</h3>
+                    <p>La categoria "Abbigliamento" offre una vasta gamma di vestiti adatti a qualsiasi attività sportiva. L'abbigliamento adeguato permette di performare meglio e di far sentire a proprio agio chi lo indossa... in qualsiasi situazione!</p>
+                    <p>Tute sportive, giacche a vento, scarpe da running, maglie termiche e leggins sono solo alcuni dei prodotti che questa sezione ha da offrire per te. Per ogni esigenza, età e fisico, qui troverai senz'altro quello che fa per te.
+                  </div>
+                
+              </div> 
               
               <div class="allenamenti">
                
