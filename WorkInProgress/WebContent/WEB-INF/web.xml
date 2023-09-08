@@ -117,4 +117,13 @@
     <url-pattern>/clientorders</url-pattern>
   </servlet-mapping>
   
+   <servlet>
+    <servlet-name> DetailsServlet </servlet-name>
+    <servlet-class>it.unisa.control.DetailsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name> DetailsServlet </servlet-name>
+    <url-pattern>/details</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

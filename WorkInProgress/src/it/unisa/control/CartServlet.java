@@ -35,7 +35,7 @@ public class CartServlet extends HttpServlet {
             
         ClientBean client = (ClientBean) request.getSession().getAttribute("utente");
         
-        if (client!= null && client.getEmail().equals("JadeTear@gmail.com")) {
+        if (client!= null && client.getEmail().equals("WorkInProgress@gmail.com")) {
         	
         	 response.sendRedirect("home");
              return;

@@ -60,7 +60,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
         }
         
         .catalogo p,.catalogo a{
-         	font-family: "Times New Roman", serif, sans-serif; 
+            font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
          	font-size: 18px;
         }
         
@@ -86,6 +86,8 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
         	border-radius:5px;
         	overflow-y: hidden;
         	padding-bottom: 0;
+        	font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
+        	
         }
 
         .filter{
@@ -131,7 +133,8 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
         h2{
         	font-size: 30px;
         	color: #0000ff;
-        	text-align:center;        
+        	text-align:center;     
+        	font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;     	   
         }
         
 		button {
@@ -144,7 +147,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
             text-align: center;
             font-size: 18px;
             letter-spacing: 1px;
-           	font-family: "Times New Roman", serif, sans-serif;
+            font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
         }
             
         button:hover {
@@ -270,6 +273,12 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
     		.card {
       			flex : 0 0 90%;
     		}
+    		
+    		.subtitle
+    		{
+    			font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
+    			
+    		}
 		}
     </style>
 </head>
@@ -279,7 +288,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
         <div class="header" >
             <%@include file="/WEB-INF/header.jsp" %></div>
     
-    <h2>Our Catalog</h2>
+    <h2 class="subtitle">Catalogo</h2>
     
     
     <div class="searchbar">
@@ -304,25 +313,25 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
     </div>
     
     <div class="filter-container">
-        <h3 style="color:#0000ff"> Filter your search </h3>
-        <button onclick="activeFilter()">Filter</button>
+        <h3 style="color:#0000ff"> Filtra la ricerca </h3>
+        <button onclick="activeFilter()">Filtri</button>
         <div id="filter" class="filter">
             
          <div class="macro">
             <input type="checkbox" id="prezzo" name="prezzo" value="price" onchange="enablePrice()" >
-            <label for="prezzo" >Price</label>
+            <label for="prezzo" >Prezzo</label>
             
             <div class="checkboxInterne" id="1">
-            <label for= "prezzo_da"> From </label>
+            <label for= "prezzo_da"> Da </label>
             <input name = "prezzo_da" id = "prezzo_da" type="number" required style="width:20%"><br>
-            <label for= "prezzo_a"> To  </label>
+            <label for= "prezzo_a"> a  </label>
             <input name = "prezzo_a" id = "prezzo_a" type="number" required style="width:20%">
            </div>
          </div>
          
          <div class="macro">
              <input type="checkbox" id="categoria" name="categoria" value="categoria" onchange="enableCategory()">
-             <label for="categoria">Category</label>
+             <label for="categoria">Categoria</label>
              
              <div class="checkboxInterne" id="3" >
                 <input type="checkbox" id="attrezzatura" name="attrezzatura" value="Attrezzatura">
@@ -340,7 +349,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
          </div>
         
     
-        <button onclick="ajaxFilter()">Filter</button>
+        <button onclick="ajaxFilter()">Filtra</button>
     </div>
     
 </div>

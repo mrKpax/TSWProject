@@ -110,7 +110,7 @@ if (cart == null) {
                     <td> <%=j.getProduct().getNome()%> </td>
                     <td> <%=j.getProduct().getPrezzo()%> <input type="hidden" name="id" value = "<%= j.getProduct().getId() %>"> </td>
                     <td> <input type="number" name="quantity" value= "<%= j.getQuantity() %>"> </td>
-                    <td> <input type="submit" name="action" value="Modify Amount"> <br> <input type="submit" name="action" value="Delete from Cart"> <br> </td>
+                    <td> <input type="submit" name="action" value="Modifica quantità"> <br> <input type="submit" name="action" value="Rimuovi dal carrello"> <br> </td>
                 </tr>
 
             </form>
@@ -120,9 +120,9 @@ if (cart == null) {
     <!-- FORM CON ACTION BUY-->
     <form action="cart" method="post">
         <input type="hidden" name="action" value="buy">
-        <input type ="submit" id="checkout-btn" value="Proceed to checkout">
+        <input type ="submit" id="checkout-btn" value="Vai al pagamento">
     </form>
-
+ 	<br>
 
     <%@include file="footer.jsp" %>
 </body>

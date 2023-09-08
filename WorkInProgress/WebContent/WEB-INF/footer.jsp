@@ -130,7 +130,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
     <div class="container">
 
         <div class="contattaci">
-            <h1>Contact us!</h1>
+            <h1>Contatti</h1>
             <p> +39 3335577999 </p>
             <p>WorkInProgress@gmail.com</p>
         </div >
