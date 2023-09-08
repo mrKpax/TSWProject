@@ -38,7 +38,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
         .card{
             flex : 0 0 25%;
             background: rgba(240,240,240);
-            border: 1px solid #634B66;
+            border: 1px solid #0000ff;
             border-radius: 10px;
             margin: 1%;
             text-align: center;
@@ -49,8 +49,8 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
           	width: 80%;
          	height: 65%;
           	transition: transform .2s;
-          	border: 1px solid #634B66;
-          	border-radius: 3px;
+          	border: 2px solid #0000ff;
+          	border-radius: 20px;
         }
         
         .catalogo img:hover {
@@ -78,10 +78,10 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
         }
         
         .filter-container{
+        	text-align:center;
         	width: 100%;
           	height: 100%;
-        	border: 1px solid  #3C6A5F;
-        	padding:5%;
+        	border: 1px solid  #0000ff;
         	background: rgba(240,240,240);
         	border-radius:5px;
         	overflow-y: hidden;
@@ -90,7 +90,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 
         .filter{
             display: flex;
-            font-size:17px;
+            font-size: 17px;
             flex-wrap: wrap;
             flex-direction: column;
             height: auto;
@@ -98,21 +98,21 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
         }
         
         .macro{
+          	text-align:center;
           	width: auto;
           	height: auto;
           	margin-top:10px;
         	margin-bottom:10px;          
-          	color: #634B66;
+          	color: #000000;
         }
          
         .checkboxInterne{	            
-            text-align:left;
+            text-align:center;
             border-top-style: double;
             border-bottom-style: double;
-            border-color: #634B66;
+            border-color: #000000;
             padding: 2%;
-            margin-top:5px;
-            padding-left:20%;        
+            margin-top:5px;  
         }
         
         .macro input[type="checkbox"]{
@@ -125,19 +125,19 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
             width: 30%;
             height: auto;
             border-top: solid;
-        	border-bottom: solid;            
+        	border-bottom: solid;    
         }
         
         h2{
-        	font-size: 20px;
-        	color: #634B66;
+        	font-size: 30px;
+        	color: #0000ff;
         	text-align:center;        
         }
         
 		button {
           	padding: 5px 10px;
       	   	margin: 0 5px;
-            border: 2px solid #634B66;
+            border: 2px solid #0000ff;
             border-radius: 10px;
             background-color: #fff;
             cursor: pointer;
@@ -149,7 +149,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
             
         button:hover {
            	color: white;
-            background-color: #634B66;
+            background-color: #0000ff;
         }
             
         button:active {
@@ -162,7 +162,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
             transition: transform .5s;
             border-radius:0;
             border:none;
-            color: #634B66;
+            color: #0000ff;
             cursor: pointer;
             text-align: center;
             font-size: 18px;
@@ -174,9 +174,9 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
         }
             
         .categoria:hover {
-           	color: #634B66;
+           	color: #0000ff;
           	background-color: white;
-            border-bottom: 1px solid #634B66;
+            border-bottom: 1px solid #0000ff;
         }
         
         @media screen and (max-width: 880px){
@@ -304,7 +304,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
     </div>
     
     <div class="filter-container">
-        <h3 style="color:#634B66"> Filter your search </h3>
+        <h3 style="color:#0000ff"> Filter your search </h3>
         <button onclick="activeFilter()">Filter</button>
         <div id="filter" class="filter">
             
