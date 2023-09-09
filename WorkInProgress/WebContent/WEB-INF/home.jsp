@@ -27,12 +27,10 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 }
 
 .slider-prodotti {
-  width: 100%;
+  width: 95%;
   height: 100%;
-  overflow-x: hidden
-;
+  overflow-x: auto;
   overflow-y: hidden;
-  padding:0.5%;
   background: transparent;
 
 }
@@ -40,9 +38,9 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 .slider-container {
   display: flex;
   height: auto;
-
- 
+  overflow-x: scroll;
 }
+
 .product-card {
   
  flex : 0 0 20%;
