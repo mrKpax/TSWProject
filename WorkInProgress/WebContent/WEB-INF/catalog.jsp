@@ -12,13 +12,14 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
     <style>
     	.grid-container {
         	display: grid;
-            grid-template-columns: 20% 80%;
+            grid-template-columns: 20% auto;
             grid-template-rows: auto auto auto;
             gap: 10px;
             background-color: #ffffff;
         }
     
         .grid-container > div {
+       		text-align: center;
             font-size: 20px;
         }
         
@@ -209,7 +210,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
         	}
 		}
 
-		@media screen and (max-width: 1030px){
+		@media screen and (max-width: 1030px){		  	
 		  	.searchbar input[type="text"]{
     			width: 30%;
    			}
