@@ -65,10 +65,10 @@ public class CartServlet extends HttpServlet {
         if (action.equals("add")){
             cart.addProduct(Product);
             }
-        if (action.equals("Modify Amount"))
+        if (action.equals("Modifica quantità"))
             cart.changeQuantity(Product, Integer.parseInt(request.getParameter("quantity")));
                         
-        if (action.equals("Delete from Cart"))
+        if (action.equals("Rimuovi dal carrello"))
             cart.removeProduct(Product);
 
 
