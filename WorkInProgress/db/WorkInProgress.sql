@@ -67,9 +67,9 @@ CREATE TABLE Cliente(
     psw VARCHAR(50) NOT NULL
 );
 
-INSERT INTO Cliente VALUES("WorkInProgress", "WRKPGR02D16D615Q", "WorkIn", "Progress", "Via Giovanni Paolo II, 132", "Fisciano", "Salerno", "84084", "3332578096", "WorkInProgress@gmail.com", "Tmw5h3nfFfl21EW");
-INSERT INTO Cliente VALUES("user1", "FRNDTS64B28F205S", "Franco", "DeVitis", "Via Luca Comerio, 1", "Milano", "Milano", "20145", "3436788001", "franco.devitis@gmail.com", "Tmw5h3nfFfl21EW");
-INSERT INTO Cliente VALUES("user2", "NTNBLT93L46G479R", "Antonia", "Borlotti", "Via Donato Creti, 19", "Bologna", "Bologna", "40128", "3299154789", "antonia.borlotti@gmail.com", "Tmw5h3nfFfl21EW");
+INSERT INTO Cliente VALUES("WorkInProgress", "WRKPGR02D16D615Q", "WorkIn", "Progress", "Via Giovanni Paolo II, 132", "Fisciano", "Salerno", "84084", "3332578096", "WorkInProgress@gmail.com", SHA1('workinprogress'));
+INSERT INTO Cliente VALUES("user1", "FRNDTS64B28F205S", "Franco", "DeVitis", "Via Luca Comerio, 1", "Milano", "Milano", "20145", "3436788001", "franco.devitis@gmail.com", SHA1('user1'));
+INSERT INTO Cliente VALUES("user2", "NTNBLT93L46G479R", "Antonia", "Borlotti", "Via Donato Creti, 19", "Bologna", "Bologna", "40128", "3299154789", "antonia.borlotti@gmail.com", SHA1('user2'));
 
 CREATE TABLE Indirizzo(
 	id INT PRIMARY KEY AUTO_INCREMENT,
@@ -91,15 +91,16 @@ CREATE TABLE Metodo_di_pagamento(
     numero_carta VARCHAR(30) NOT NULL,
     cvv VARCHAR(4) NOT NULL,
     data_scadenza VARCHAR(15) NOT NULL,
+    circuito ENUM('Paypal','Mastercard','VISA','PostePay','American Express','Bancomat' ) NOT NULL,
     username VARCHAR(20) NOT NULL,
 	FOREIGN KEY(username) REFERENCES Cliente(username)
 		ON UPDATE CASCADE
         ON DELETE RESTRICT
 );
 
-INSERT INTO Metodo_di_pagamento VALUES(1, "123456789", "111", "2027-28-02", "user1");
-INSERT INTO Metodo_di_pagamento VALUES(2, "987654321", "222", "2025-13-07", "user1");
-INSERT INTO Metodo_di_pagamento VALUES(3, "998876412", "990", "2026-05-11", "user2");
+INSERT INTO Metodo_di_pagamento VALUES(1, "123456789", "111", "2027-28-02", "VISA","user1");
+INSERT INTO Metodo_di_pagamento VALUES(2, "987654321", "222", "2025-13-07", "VISA","user1");
+INSERT INTO Metodo_di_pagamento VALUES(3, "998876412", "990", "2026-05-11", "VISA","user2");
 
 CREATE TABLE Ordine(
 	id INT PRIMARY KEY,
