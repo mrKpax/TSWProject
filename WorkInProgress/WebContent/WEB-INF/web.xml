@@ -126,4 +126,14 @@
     <url-pattern>/details</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <servlet-name> ClientServlet </servlet-name>
+    <servlet-class>it.unisa.control.ClientServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name> ClientServlet </servlet-name>
+    <url-pattern>/userdetails</url-pattern>
+  </servlet-mapping>
+  
+  
 </web-app>

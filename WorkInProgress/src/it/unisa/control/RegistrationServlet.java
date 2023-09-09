@@ -179,7 +179,7 @@ public class RegistrationServlet extends HttpServlet {
     }
     
     public void sendError(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
-        request.setAttribute("error", "JadeTear encountered a problem during your registration. Please, try to fill up the form correctly and check your data before submitting.");
+        request.setAttribute("error", "WorkInProgress encountered a problem during your registration. Please, try to fill up the form correctly and check your data before submitting.");
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/registration.jsp");
         dispatcher.forward(request, response);
     }

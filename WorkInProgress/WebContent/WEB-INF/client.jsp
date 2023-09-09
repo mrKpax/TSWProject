@@ -25,7 +25,8 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang= "en">
 <head>
-        <title>User page</title>
+        <title>Account</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <style>
             
@@ -43,7 +44,10 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 
         	}
 
-
+			span, label, input{
+				font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;
+			}
+			
         @media screen and (max-width: 700px){
             
             .numberRow{
@@ -74,7 +78,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
             }
 
             input[type="submit"] {
-                background-color: #18020C;
+                background-color: #0000ff;
                 color: #fff;
                 border: none;
                 padding: 2%;
@@ -85,7 +89,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
             }
 
             input[type="submit"]:hover {
-                background-color: #84A8A1;
+                background-color: #0000ff;
                 color: #fff;
                 border: none;
                 padding: 2%;
@@ -101,7 +105,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
         
             #reset{
             
-            background-color: #18020C;
+            background-color: #000000;
                 color: #fff;
                 border: none;
                 padding: 2%;
@@ -113,7 +117,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
             }
         #reset:hover{
 
-             background-color: #84A8A1;
+             background-color: #000000;
                 color: #fff;
                 border: none;
                 padding: 2%;
@@ -122,13 +126,17 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
                 font-size:5px;
 
             }
+            
+        .subtitle{
+        	color: #000000;
+        }
+           
         }
         </style>    
 </head>
 <body>
     <div class="grid-container">
-        <div class="header">
-            <%@include file="header.jsp" %></div>
+    <%@include file="header.jsp" %>
 <!-- -------------------- ADMIN --------------------- -->
 
     <%
@@ -137,7 +145,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
         
           <form action="admin" method="get">
         <input type="hidden" name="action" value="clientsNoFilter">
-	<h1> Clienti di WorkInProgress </h1>
+	<h1> Clienti di Work in Progress </h1>
     </form>
 
     <form action="admin?action=ByClient" method="post">
@@ -364,7 +372,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
             </div>
         
             <div class="submitContainer">
-                <input class="submit" type="submit" value="Add">
+                <input class="submit" type="submit" value="Aggiungi">
             </div>
         
     </form>

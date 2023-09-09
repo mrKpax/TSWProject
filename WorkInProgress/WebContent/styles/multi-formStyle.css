@@ -69,8 +69,8 @@ form.delete{
   height:auto;
   margin:auto;
   text-align:center;
-  color: #4c8577;
   text-transform: uppercase;
+  color: #000000;
   letter-spacing: 2px;
   display: inline;
   font-weight: bold;

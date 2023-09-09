@@ -165,43 +165,43 @@ pageEncoding="UTF-8" import="java.util.*, it.unisa.model.*"%>
        <div class="inputBox">
         <span class="error" id="errorDestinatario"></span>
         <input id="destinatario" name="destinatario" type="text" maxlenght="30" required autocomplete="off" placeholder="destinatario" >
-        <label id="destinatarioLabel" for="destinatario">Insert addressee:</label>
+        <label id="destinatarioLabel" for="destinatario">Inserisci destinatario:</label>
        </div>
 
        <div class="inputBox">
-        <input name="note" type="text" maxlenght="100" autocomplete="off" placeholder="Insert notes...">
-        <label for="note">Notes:</label>
+        <input name="note" type="text" maxlenght="100" autocomplete="off" placeholder="Inserisci note...">
+        <label for="note">Note:</label>
        </div>
 
        <div class="inputBox special">
-        <label for="spedizione">Shipping:</label>
+        <label for="spedizione">Spedizione:</label>
         <input type="hidden" name="action" value="spedizione">
         <input type="radio" id ="1"  name="spedizione" value="Standard" required>
-        <label for="1">Standard Shipping (7 - 10  Business Days)</label>
+        <label for="1">Standard Shipping (7 - 10  giorni lavorativi)</label>
         <input type="radio" id="2" name="spedizione" value="Economic"  required>
-        <label for="2">Economic Shipping (12 - 15  Business Days) </label>
+        <label for="2">Economic Shipping (12 - 15  giorni lavorativi) </label>
         <input type="radio" id="3" name="spedizione" value="Express" required>
-        <label for="3">Express Shipping (3 - 5  Business Days) ( <b>€5</b> )</label>    
+        <label for="3">Express Shipping (3 - 5  giorni lavorativi) ( <b>€5</b> )</label>    
        </div>
 
 
        <div class="inputBox special">
-        <label for="regalo">Gift:</label><br>
+        <label for="regalo">Regalo:</label><br>
         <input name="regalo" type="checkbox" value="true">
        </div> 
 
        <div class="inputBox special">
         <input type="hidden" name="action" value="metodo_di_pagamento">
         <input type="radio" id ="1"  name="metodo_di_pagamento" value="carta_di_credito" required onchange="enableCard()">
-        <label for="1">Credit card</label>
+        <label for="1">Carta di credito</label>
         <input type="radio" id="2" name="metodo_di_pagamento" value="carta_di_debito"  required onchange="enableCard()">
-        <label for="2">Charge card </label>
+        <label for="2">Carta di debito </label>
         <input type="radio" id="3" name="metodo_di_pagamento" value="Paypal" required onchange="enableCard()">
         <label for="3">Paypal</label>       
        </div>
 
        <div class="inputBox special">
-        <label for="carta">Insert card:</label>
+        <label for="carta">Inserisci carta:</label>
         <select name="carta" id="carta" disabled >
 
          <%  for(int i=0; i<payments.size(); i++) { %>
@@ -212,7 +212,7 @@ pageEncoding="UTF-8" import="java.util.*, it.unisa.model.*"%>
         </div>
 
         <div class="inputBox special">
-         <label for="indirizzo">Insert shipping address:</label><br>
+         <label for="indirizzo">Inserisci indirizzo di consegna:</label><br>
          <select name="indirizzo" id="indirizzo" >
 
           <%  for(int i=0; i<addresses.size(); i++) { %>

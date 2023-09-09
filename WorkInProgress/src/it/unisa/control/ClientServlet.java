@@ -285,7 +285,7 @@ public class ClientServlet extends HttpServlet{
     }
     
     public void sendError(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
-        request.setAttribute("error", "JadeTear encountered a problem. Please, try to fill up the form correctly and check your data before submitting.");
+        request.setAttribute("error", "WorkInProgress encountered a problem. Please, try to fill up the form correctly and check your data before submitting.");
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/client.jsp");
         dispatcher.forward(request, response);
     }

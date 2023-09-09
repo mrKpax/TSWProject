@@ -26,6 +26,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 			
 
 			<link rel="stylesheet" type="text/css" href="./styles/tableStyle.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 			<meta charset="UTF-8">
 			<meta content="width=device-width, initial-scale=1" name="viewport" />
 			<title>Orders</title>
@@ -188,7 +189,8 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 		</head>
 
 		<body>
-			<%@ include file="header.jsp" %>
+			<div class="header" >
+        		<%@include file="/WEB-INF/header.jsp" %></div>
 
 			<%	if(!client.getEmail().equals("WorkInProgress@gmail.com"))  { %>
 				<!-- ------------------------------------------------------ -->
@@ -221,7 +223,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 					<!--	---------------------------------------------------------------- -->
 					<form action="admin" method="get">
 						<input type="hidden" name="action" value="ordersNoFilter">
-						<h1> Ordini Work in Progress </h1>
+						<h1> Ordini di Work in Progress </h1>
 					</form>
 					
 					<form id="adminForm" action="admin?action=orders" method="post">

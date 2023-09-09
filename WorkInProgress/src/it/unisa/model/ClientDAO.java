@@ -272,7 +272,7 @@ public class ClientDAO {
         ArrayList < ClientBean > clients = new ArrayList < ClientBean > ();
      
 
-        String selectSQL = "SELECT * FROM " + TABLE + " WHERE username <> 'JadeTear'" ;
+        String selectSQL = "SELECT * FROM " + TABLE + " WHERE username <> 'WorkInProgress'" ;
         
         ClientBean client = null;
 

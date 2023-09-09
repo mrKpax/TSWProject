@@ -17,16 +17,16 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
     
 </head>
 <body>
-    <h3>Ops... Something went wrong!</h3>
+    <h3>Ops... Qualcosa è andato storto!</h3>
     
         <img src="images//error.png" class="errorImg"alt="Error" >
 
-    <p> Are you sure you're registered?
-        If not, try to <a href="registration">register <i class="fa fa-user-plus" aria-hidden="true"></i></a> 
+    <p> Sei sicuro di essere registrato?
+        Se non lo sei, prova a <a href="registration">registrarti <i class="fa fa-user-plus" aria-hidden="true"></i></a> 
     </p>
 
-    <p> If you're already registered or you put the wrong login credentials...
-        Retry <a href="login">login <i class="fa fa-sign-in" aria-hidden="true"></i></a> 
+    <p> Se sei già registrato o hai inserito le credenziali errate,
+         torna al <a href="login">login <i class="fa fa-sign-in" aria-hidden="true"></i></a> 
     </p>
 
 </body>
