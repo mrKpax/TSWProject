@@ -65,9 +65,8 @@ public class CartServlet extends HttpServlet {
         if (action.equals("add")){
             cart.addProduct(Product);
             }
-        if (action.equals("Modifica quantità"))
-            cart.changeQuantity(Product, Integer.parseInt(request.getParameter("quantity")));
-                        
+        if (action.equals("Modifica quantita"))
+            cart.changeQuantity(Product, Integer.parseInt(request.getParameter("quantity")));                
         if (action.equals("Rimuovi dal carrello"))
             cart.removeProduct(Product);
 
@@ -105,6 +104,7 @@ public class CartServlet extends HttpServlet {
                 
                 	request.setAttribute("addresses", indirizzi);
                 	request.setAttribute("payments",carte);
+                    System.out.println("DOVREBBE PAGARE");              	
                     RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/payment");
                     dispatcher.forward(request, response);       
                     return;

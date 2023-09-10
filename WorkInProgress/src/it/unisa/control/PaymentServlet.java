@@ -181,16 +181,12 @@ public class PaymentServlet extends HttpServlet {
                     order.setConfezione_regalo(Boolean.parseBoolean(request.getParameter("regalo")));
 
                     try {
-                            orderModel.doSave(order);
+                        //controllo che la quantità di prodotti inserita nel carrello sia ancora disponibile
+                    	orderModel.doSave(order);
                             for(CartProduct cp : cart.getProducts()){
                                 ProductBean Product = ProductModel.doRetrieveByKey(cp.getProduct().getId());
-
-
-                            response.sendRedirect("generalError.jsp");
-                            return;
-                        }
-                        
-
+                            }
+ 
                     } catch (SQLException e) {
                         LOGGER.log( Level.SEVERE, e.toString(), e );
                         response.sendRedirect("generalError.jsp");
@@ -246,7 +242,7 @@ public class PaymentServlet extends HttpServlet {
     }
     
     public void sendError(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
-        request.setAttribute("error", "WorkInProgress encountered a problem during the payment. Please, try to fill up the form correctly and check your data before submitting.");
+        request.setAttribute("error", "JadeTear encountered a problem during the payment. Please, try to fill up the form correctly and check your data before submitting.");
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/checkout.jsp");
         dispatcher.forward(request, response);
     }
