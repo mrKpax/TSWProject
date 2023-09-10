@@ -185,6 +185,7 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 			
         }
 			</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 		</head>
 
@@ -211,7 +212,8 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 							<td><%=order.getData() %></td>
 							<td><%=order.getPrezzo_totale() %></td>
 
-							<td><button onclick="redirectToServlet()" id="clientbutton" value = "<%=order.getId()%>"><i class="fa fa-eye" aria-hidden="true"></i></button></td>
+<td><button onclick="redirectToServlet(this)" class="clientbutton" value="<%=order.getId()%>"><i class="fa fa-eye" aria-hidden="true"></i></button></td>
+
 						</tr>
 						<%
 					}	
@@ -280,7 +282,8 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 										<td><%=order.getPrezzo_totale() %></td>
 										<td><%=order.getClient().getUsername() %></td>
 
-										<td><button onclick="redirectToServlet2()" id="adminbutton" value = "<%=order.getId()%>"><i class="fa fa-eye" aria-hidden="true"></i></button></td>
+<td><button onclick="redirectToServlet2(this)" class="adminbutton" value="<%=order.getId()%>"><i class="fa fa-eye" aria-hidden="true"></i></button></td>
+
 									</tr>
 									<%
 								}	
@@ -297,20 +300,15 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 
 							<script>
 
-								function redirectToServlet() {
+							function redirectToServlet(buttonElement) {
+							    var id = $(buttonElement).val();
+							    window.location.href = "orderdetails?ordine=" + id;
+							}
 
-									var id = $("#clientbutton").val();
-
-
-									window.location.href = "orderdetails?ordine="+id;
-								}
-
-								function redirectToServlet2() {
-
-									var id = $("#adminbutton").val();
-
-									window.location.href = "orderdetails?ordine="+id;
-								}
+							function redirectToServlet2(buttonElement) {
+							    var id = $(buttonElement).val();
+							    window.location.href = "orderdetails?ordine=" + id;
+							}
 
 							</script>
 

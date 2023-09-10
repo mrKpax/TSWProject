@@ -203,7 +203,7 @@ pageEncoding="UTF-8" import="java.util.*, it.unisa.model.*"%>
        <div class="inputBox special">
         <label for="carta">Inserisci carta:</label>
         <select name="carta" id="carta" disabled >
-
+        System.out.println("dimensione carte " + payments.size());
          <%  for(int i=0; i<payments.size(); i++) { %>
           <option value="<%= payments.get(i).getId()%>"><%="****" + payments.get(i).getNumero_carta().substring(payments.get(i).getNumero_carta().length()-4) %></option>
           <% } %> 

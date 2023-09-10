@@ -136,4 +136,15 @@
   </servlet-mapping>
   
   
+    <servlet>
+    <servlet-name> OrderDetailsServlet </servlet-name>
+    <servlet-class>it.unisa.control.OrderDetailsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name> OrderDetailsServlet </servlet-name>
+    <url-pattern>/orderdetails</url-pattern>
+  </servlet-mapping>
+  
+  
+  
 </web-app>

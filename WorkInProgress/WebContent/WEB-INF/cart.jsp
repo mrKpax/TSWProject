@@ -110,7 +110,7 @@ if (cart == null) {
                     <td> <%=j.getProduct().getNome()%> </td>
                     <td> <%=j.getProduct().getPrezzo()%> <input type="hidden" name="id" value = "<%= j.getProduct().getId() %>"> </td>
                     <td> <input type="number" name="quantity" value= "<%= j.getQuantity() %>"> </td>
-                    <td> <input type="submit" name="action" value="Modifica quantità"> <br> <input type="submit" name="action" value="Rimuovi dal carrello"> <br> </td>
+                    <td> <input type="submit" name="action" value="Modifica quantita"> <br> <input type="submit" name="action" value="Rimuovi dal carrello"> <br> </td>
                 </tr>
 
             </form>
