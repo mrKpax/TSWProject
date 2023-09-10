@@ -195,12 +195,12 @@ import = "java.util.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 
 			<%	if(!client.getEmail().equals("WorkInProgress@gmail.com"))  { %>
 				<!-- ------------------------------------------------------ -->
-				<h1> ${utente.username}'s orders</h1>
+				<h1> Ordini di ${utente.username}</h1>
 				<table>
 					<tr>
-						<th>  Order Date  </th>
-						<th>  Total Price  </th>
-						<th>  Details  </th>
+						<th>  Data ordine  </th>
+						<th>  Prezzo totale  </th>
+						<th>  Dettagli  </th>
 
 					</tr>
 

@@ -82,13 +82,14 @@ public class CatalogServlet extends HttpServlet {
 
          String categoria = request.getParameter("categoria");
          String attrezzatura = request.getParameter("attrezzatura");
+         String accessori = request.getParameter("accessori");
          String abbigliamento = request.getParameter("abbigliamento");
          String fab = request.getParameter("fab");
          String allenamenti = request.getParameter("allenamenti");
          
          //viene prima preso tutto dalla request ed in seguito aggiunti tutti i filtri
          if (!categoria.equals("")){
-             sql=" AND (prezzo > "+prezzo_da+" AND prezzo < "+prezzo_a+") AND (categoria = '"+attrezzatura+"' OR categoria = '"+abbigliamento+"' OR categoria ='"+fab+"' OR categoria ='"+allenamenti+"')";
+             sql=" AND (prezzo > "+prezzo_da+" AND prezzo < "+prezzo_a+") AND (categoria = '"+attrezzatura+"' OR categoria = '"+abbigliamento+"' OR categoria ='"+fab+"' OR categoria ='"+allenamenti+"' OR categoria = '"+accessori+"')";
          }//se tutti i filtri sono vuoti, di default viene cercato per prezzo
              else if (categoria.equals("")){
                  sql = " AND prezzo > "+ prezzo_da +" AND prezzo < "+ prezzo_a;

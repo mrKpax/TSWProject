@@ -209,7 +209,7 @@ public class PaymentServlet extends HttpServlet {
                     invoice.setImporto(totale);
                     invoice.setData_emissione(data_emissione);
                     invoice.setData_scadenza(data_scadenza);
-                    invoice.setStato_pagamento("Paid");
+                    invoice.setStato_pagamento("Pagato");
                     invoice.setIva(22);
                     invoice.setId(id_ordine);
                     
@@ -242,7 +242,7 @@ public class PaymentServlet extends HttpServlet {
     }
     
     public void sendError(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
-        request.setAttribute("error", "JadeTear encountered a problem during the payment. Please, try to fill up the form correctly and check your data before submitting.");
+        request.setAttribute("error", "WorkInProgress encountered a problem during the payment. Please, try to fill up the form correctly and check your data before submitting.");
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/checkout.jsp");
         dispatcher.forward(request, response);
     }

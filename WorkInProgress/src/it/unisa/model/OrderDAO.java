@@ -45,7 +45,7 @@ public class OrderDAO {
 
         String insertSQL = "INSERT INTO " + TABLE_NAME +
                            " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        System.out.println("QUA CI ARRIVO: ");
+        
         try {
             connection = ds.getConnection();
             preparedStatement = connection.prepareStatement(insertSQL);

@@ -8,7 +8,7 @@ InvoiceBean invoice = (InvoiceBean) request.getAttribute("invoice");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Invoice</title>
+  <title>Fattura</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -65,27 +65,30 @@ InvoiceBean invoice = (InvoiceBean) request.getAttribute("invoice");
       color: #fff;
       border: none;
       padding: 10px 20px;
+      border-radius: 14px;
+      margin-bottom: 10px;
     }
     #stampButton:hover {
-      background-color: #4C8577;
+      background-color: #0000ff;
       border-radius: 14px;
+      cursor: pointer;
     }
   </style>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
 </head>
 <body>
-  <h1>Invoice</h1>
+  <h1>Fattura</h1>
   
   <button id="stampButton" onclick="eseguiComandoRapido()">Download</button><br>
   <div class="table-container">
     <table>
       <thead>
         <tr>
-          <th class="item-name">Item</th>
-          <th class="item-price">Price</th>
-          <th class="item-quantity">Quantity</th>
-          <th class="item-total">Total</th>
+          <th class="item-name">Prodotto</th>
+          <th class="item-price">Prezzo unitario</th>
+          <th class="item-quantity">Quantità</th>
+          <th class="item-total">Totale</th>
         </tr>
       </thead>
       <tbody>
@@ -107,7 +110,7 @@ InvoiceBean invoice = (InvoiceBean) request.getAttribute("invoice");
           <td class="invoice-total">€<%= invoice.getIva() %></td>
         </tr>
         <tr class="total-row">
-          <td colspan="3">Total</td>
+          <td colspan="3">Totale</td>
           <td class="invoice-total">€<%= invoice.getImporto()%></td>
         </tr>
       </tfoot>
@@ -117,22 +120,22 @@ InvoiceBean invoice = (InvoiceBean) request.getAttribute("invoice");
     <table>
       <tbody>
         <tr>
-          <td><strong>Invoice Details</strong></td>
+          <td><strong>Dettagli fattura</strong></td>
         </tr>
         <tr>
           <td>SDI (Supplier Delivery Information)</td>
           <td class="invoice-details"><%= invoice.getSdi() %></td>
         </tr>
         <tr>
-          <td>Emission Date</td>
+          <td>Data emissione</td>
           <td class="invoice-details"><%= invoice.getData_emissione() %></td>
         </tr>
         <tr>
-          <td>Expiration Date</td>
+          <td>Data scadenza</td>
           <td class="invoice-details"><%= invoice.getData_scadenza() %></td>
         </tr>
         <tr>
-          <td>Payment State</td>
+          <td>Stato del pagamento</td>
           <td class="invoice-details"><%= invoice.getStato_pagamento() %></td>
         </tr>
       </tbody>

@@ -127,7 +127,7 @@ CREATE TABLE Fattura(
     data_scadenza VARCHAR(15) NOT NULL,
     data_emissione VARCHAR(15) NOT NULL,
     stato_del_pagamento VARCHAR(15),
-    CHECK(stato_del_pagamento='Paid' OR stato_del_pagamento='Pending'),
+    CHECK(stato_del_pagamento='Pagato' OR stato_del_pagamento='In attesa'),
     IVA FLOAT NOT NULL,
     id INT UNIQUE NOT NULL,
     FOREIGN KEY(id) REFERENCES Ordine(id)

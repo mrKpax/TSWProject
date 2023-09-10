@@ -104,7 +104,7 @@ public class CartServlet extends HttpServlet {
                 
                 	request.setAttribute("addresses", indirizzi);
                 	request.setAttribute("payments",carte);
-                    System.out.println("DOVREBBE PAGARE");              	
+                                  	
                     RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/payment");
                     dispatcher.forward(request, response);       
                     return;

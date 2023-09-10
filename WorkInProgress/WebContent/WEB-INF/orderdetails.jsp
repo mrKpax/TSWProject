@@ -17,7 +17,7 @@ import = "java.util.*, java.sql.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 	<link rel="stylesheet" type="text/css" href="./styles/tableStyle.css">
 	<meta content="width=device-width, initial-scale=1" name="viewport" />
 	
-	<title>Order Details</title>
+	<title>Dettagli ordine</title>
 	
 	<style>
 
@@ -86,7 +86,7 @@ import = "java.util.*, java.sql.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 <body>
 	<%@include file="header.jsp" %>
 	<h1>
-		Order date: <%=order.getData() %>
+		Data ordine: <%=order.getData() %>
 	</h1>
 
 
@@ -94,7 +94,7 @@ import = "java.util.*, java.sql.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 
 		<div>
 			<p>
-				Total Price € <%=order.getPrezzo_totale()%>
+				Prezzo totale € <%=order.getPrezzo_totale()%>
 			</p>
 
 		</div>
@@ -105,11 +105,10 @@ import = "java.util.*, java.sql.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 			<div >
 				<table>
 					<tr>
-						<th>Name</th>
-						<th>Image</th>
-						<th>Customized</th>
-						<th>Quantity</th>
-						<th>Price</th>
+						<th>Prodotto</th>
+						<th>Immagine</th>
+						<th>Quantità</th>
+						<th>Prezzo unitario</th>
 					</tr>
 					<%
 
@@ -130,7 +129,7 @@ import = "java.util.*, java.sql.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 
 					<form action="orderdetails?action=viewInvoice" method="post">
 						<input type="hidden" name="idOrder" value="<%= order.getId() %>" >
-						<input type="submit" value="View Invoice">
+						<input type="submit" value="Vedi fattura">
 					</form>
 
 				</div>
@@ -139,7 +138,7 @@ import = "java.util.*, java.sql.*, it.unisa.model.*" pageEncoding="UTF-8"%>
 		</div>
 
 		<br>
-		<a href="clientorders" id="goBack"><i class="fa fa-angle-double-left" aria-hidden="true"></i>Go back</a></p>
+		<a href="clientorders" id="goBack"><i class="fa fa-angle-double-left" aria-hidden="true"></i>Indietro</a></p>
 
 		<%@include file="footer.jsp" %>
 	</body>
