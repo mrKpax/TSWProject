@@ -45,7 +45,7 @@ public class OrderDAO {
 
         String insertSQL = "INSERT INTO " + TABLE_NAME +
                            " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
+        System.out.println("QUA CI ARRIVO: ");
         try {
             connection = ds.getConnection();
             preparedStatement = connection.prepareStatement(insertSQL);
@@ -113,7 +113,7 @@ public class OrderDAO {
                 bean.setIndirizzo_di_spedizione(rs.getString("indirizzo_di_spedizione"));
                 bean.setNumero_di_tracking(rs.getString("numero_di_tracking"));
                 bean.setNote(rs.getString("note"));
-                bean.setData(rs.getDate("data"));
+                bean.setData(rs.getDate("data_ordine"));
                 bean.setMetodo_di_spedizione(rs.getString("metodo_di_spedizione"));
                 bean.setConfezione_regalo(rs.getBoolean("confezione_regalo"));
             }
@@ -159,7 +159,7 @@ public class OrderDAO {
                 bean.setIndirizzo_di_spedizione(rs.getString("indirizzo_di_spedizione"));
                 bean.setNumero_di_tracking(rs.getString("numero_di_tracking"));
                 bean.setNote(rs.getString("note"));
-                bean.setData(rs.getDate("data"));
+                bean.setData(rs.getDate("data_ordine"));
                 bean.setMetodo_di_spedizione(rs.getString("metodo_di_spedizione"));
                 bean.setConfezione_regalo(rs.getBoolean("confezione_regalo"));
             }
@@ -207,7 +207,7 @@ public class OrderDAO {
                 bean.setIndirizzo_di_spedizione(rs.getString("indirizzo_di_spedizione"));
                 bean.setNumero_di_tracking(rs.getString("numero_di_tracking"));
                 bean.setNote(rs.getString("note"));
-                bean.setData(rs.getDate("data"));
+                bean.setData(rs.getDate("data_ordine"));
                 bean.setMetodo_di_spedizione(rs.getString("metodo_di_spedizione"));
                 bean.setConfezione_regalo(rs.getBoolean("confezione_regalo"));
 
@@ -259,7 +259,7 @@ public class OrderDAO {
                 bean.setIndirizzo_di_spedizione(rs.getString("indirizzo_di_spedizione"));
                 bean.setNumero_di_tracking(rs.getString("numero_di_tracking"));
                 bean.setNote(rs.getString("note"));
-                bean.setData(rs.getDate("data"));
+                bean.setData(rs.getDate("data_ordine"));
                 bean.setMetodo_di_spedizione(rs.getString("metodo_di_spedizione"));
                 bean.setConfezione_regalo(rs.getBoolean("confezione_regalo"));
 
@@ -311,7 +311,7 @@ public class OrderDAO {
                 bean.setIndirizzo_di_spedizione(rs.getString("indirizzo_di_spedizione"));
                 bean.setNumero_di_tracking(rs.getString("numero_di_tracking"));
                 bean.setNote(rs.getString("note"));
-                bean.setData(rs.getDate("data"));
+                bean.setData(rs.getDate("data_ordine"));
                 bean.setMetodo_di_spedizione(rs.getString("metodo_di_spedizione"));
                 bean.setConfezione_regalo(rs.getBoolean("confezione_regalo"));
 
@@ -364,7 +364,7 @@ public class OrderDAO {
                 bean.setIndirizzo_di_spedizione(rs.getString("indirizzo_di_spedizione"));
                 bean.setNumero_di_tracking(rs.getString("numero_di_tracking"));
                 bean.setNote(rs.getString("note"));
-                bean.setData(rs.getDate("data"));
+                bean.setData(rs.getDate("data_ordine"));
                 bean.setMetodo_di_spedizione(rs.getString("metodo_di_spedizione"));
                 bean.setConfezione_regalo(rs.getBoolean("confezione_regalo"));
 
