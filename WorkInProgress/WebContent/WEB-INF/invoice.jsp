@@ -8,7 +8,7 @@ InvoiceBean invoice = (InvoiceBean) request.getAttribute("invoice");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Fattura</title>
+  <title>Invoice</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -65,34 +65,33 @@ InvoiceBean invoice = (InvoiceBean) request.getAttribute("invoice");
       color: #fff;
       border: none;
       padding: 10px 20px;
-      border-radius: 14px;
-      margin-bottom: 10px;
     }
     #stampButton:hover {
-      background-color: #0000ff;
+      background-color: #4C8577;
       border-radius: 14px;
-      cursor: pointer;
     }
   </style>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
 </head>
 <body>
-  <h1>Fattura</h1>
+  <h1>Invoice</h1>
   
   <button id="stampButton" onclick="eseguiComandoRapido()">Download</button><br>
   <div class="table-container">
     <table>
       <thead>
         <tr>
-          <th class="item-name">Prodotto</th>
-          <th class="item-price">Prezzo unitario</th>
-          <th class="item-quantity">Quantità</th>
-          <th class="item-total">Totale</th>
+          <th class="item-name">Item</th>
+          <th class="item-price">Price</th>
+          <th class="item-quantity">Quantity</th>
+          <th class="item-total">Total</th>
         </tr>
       </thead>
       <tbody>
-      <% for(int i=0 ;i< products.size();i++){
+      <% float iva_totale=0;
+      	for(int i=0 ;i< products.size();i++){
+      		iva_totale=iva_totale+products.get(i).getPrezzo() * products.get(i).getIVA()/100*products.get(i).getQuantita();
       %>
         <tr>
           <td class="item-name"><%=Products.get(i).getNome()%></td>
@@ -101,17 +100,19 @@ InvoiceBean invoice = (InvoiceBean) request.getAttribute("invoice");
           <td class="item-total"><%=products.get(i).getPrezzo() * products.get(i).getQuantita()%></td>
         </tr>
         
-        <% } %>
+        <% } 
+       iva_totale=(float) (Math.round(iva_totale * 100.0) / 100.0);
+        %>
        
       </tbody>
       <tfoot>
         <tr class="total-row">
           <td colspan="3">IVA</td>
-          <td class="invoice-total">€<%= invoice.getIva() %></td>
+          <td class="invoice-total">€<%= iva_totale %></td>
         </tr>
         <tr class="total-row">
-          <td colspan="3">Totale</td>
-          <td class="invoice-total">€<%= invoice.getImporto()%></td>
+          <td colspan="3">Total</td>
+          <td class="invoice-total">€<%= invoice.getImporto() + iva_totale%></td>
         </tr>
       </tfoot>
     </table>
@@ -120,22 +121,22 @@ InvoiceBean invoice = (InvoiceBean) request.getAttribute("invoice");
     <table>
       <tbody>
         <tr>
-          <td><strong>Dettagli fattura</strong></td>
+          <td><strong>Invoice Details</strong></td>
         </tr>
         <tr>
           <td>SDI (Supplier Delivery Information)</td>
           <td class="invoice-details"><%= invoice.getSdi() %></td>
         </tr>
         <tr>
-          <td>Data emissione</td>
+          <td>Emission Date</td>
           <td class="invoice-details"><%= invoice.getData_emissione() %></td>
         </tr>
         <tr>
-          <td>Data scadenza</td>
+          <td>Expiration Date</td>
           <td class="invoice-details"><%= invoice.getData_scadenza() %></td>
         </tr>
         <tr>
-          <td>Stato del pagamento</td>
+          <td>Payment State</td>
           <td class="invoice-details"><%= invoice.getStato_pagamento() %></td>
         </tr>
       </tbody>
