@@ -320,7 +320,7 @@ border-color: #0000ff;
       
     <h1> Guarda i nostri prodotti!</h1>
       
-      <div class="slider-prodottii">
+      <div class="slider-prodotti">
             <div class="slider-container">
                 <% for (ProductBean prodotto : products){%>
                  <div class = "product-card">

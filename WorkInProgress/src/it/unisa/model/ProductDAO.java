@@ -48,11 +48,11 @@ public class ProductDAO {
       preparedStatement = connection.prepareStatement(insertSQL,Statement.RETURN_GENERATED_KEYS);
       preparedStatement.setString(1, product.getNome());
       preparedStatement.setString(2, product.getCategoria());
-      preparedStatement.setString(3, product.getMarca());
-      preparedStatement.setString(4, product.getImmagine());
+      preparedStatement.setString(3, product.getDescrizione());
+      preparedStatement.setString(4, product.getMarca());
+      preparedStatement.setString(5, product.getImmagine());
       preparedStatement.setFloat(6, product.getIVA());
       preparedStatement.setFloat(7, product.getPrezzo());
-      preparedStatement.setString(8, product.getDescrizione());
 
       preparedStatement.executeUpdate();
 
@@ -248,7 +248,7 @@ public class ProductDAO {
       preparedStatement.setFloat(5, product.getIVA());
       preparedStatement.setFloat(6, product.getPrezzo());
       preparedStatement.setString(7, product.getDescrizione());
-      preparedStatement.setInt(9, product.getId());
+      preparedStatement.setInt(8, product.getId());
 
       preparedStatement.executeUpdate();
       
