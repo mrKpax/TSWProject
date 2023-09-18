@@ -19,7 +19,7 @@ public class DetailsServlet extends HttpServlet {
 	private static final Logger LOGGER = Logger.getLogger(DetailsServlet.class.getName() );
 	
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-      //viene preso un gioiello in base al suo id, preso come parametro della request
+      //viene preso un prodotto in base al suo id, preso come parametro della request
       ProductDAO model = new ProductDAO();
 
       String id = request.getParameter("id");

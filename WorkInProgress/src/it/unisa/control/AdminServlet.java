@@ -34,7 +34,7 @@ public class AdminServlet extends HttpServlet {
             //La Servlet dell'admin è collegata a più jsp:
             //1) la client.jsp (per la visualizzazione dei clienti),
             //2) la clientorders.jsp (per la visualizzaizone degli ordini degli utenti)
-            //3) la admin.jsp (per le operazioni da admin, quali aggiunta, modifica ed eliminazione di gioielli)
+            //3) la admin.jsp (per le operazioni da admin, quali aggiunta, modifica ed eliminazione di prodotti)
             
             //controllo se è stato inserito il client nella sessione
             ClientBean client = (ClientBean) request.getSession().getAttribute("utente");
@@ -56,7 +56,7 @@ public class AdminServlet extends HttpServlet {
                   return;
             }
             
-            //azione di inserimento di un nuovo gioiello
+            //azione di inserimento di un nuovo prodotto
             if (action.equals("insert")) {
 
                   //CODICE DELL'UPLOAD DELLE IMMAGINI NELLA CARTELLA
@@ -166,7 +166,7 @@ public class AdminServlet extends HttpServlet {
 
             }
             
-            //azione di caricamento di un gioiello dal suo id, avviene prima di poterlo modificare
+            //azione di caricamento di un prodotto dal suo id, avviene prima di poterlo modificare
             if (action.equals("load")) {
                   ProductBean productToModify = new ProductBean();
 
@@ -269,7 +269,7 @@ public class AdminServlet extends HttpServlet {
 
             }
             
-            //azione di eliminazione: prende l'id di un gioiello e lo elimina
+            //azione di eliminazione: prende l'id di un prodotto e lo elimina
             if (action.equals("delete")) {
                   String id = request.getParameter("id");
 
